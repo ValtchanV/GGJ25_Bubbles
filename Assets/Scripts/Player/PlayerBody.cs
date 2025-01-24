@@ -12,6 +12,7 @@ public class PlayerBody : MonoBehaviour
     Transform _spriteTransforms;
     List<SpringJoint2D> _springs = new ();
     float _currentRadious = 0.8f;
+    float _currentLinearDamping = 0.3f;
 
     Mesh _mesh;
     private Vector3[] _meshVertices;
@@ -45,6 +46,9 @@ public class PlayerBody : MonoBehaviour
             var collider = circle.AddComponent<CircleCollider2D>();
         }
         
+        var dampingRatio = 0.25f;
+        var frequency = 3f;
+
         for (var i = 0; i < _ballBodies.Count; i++)
         {
             var ballA = _ballBodies[i];
@@ -54,8 +58,8 @@ public class PlayerBody : MonoBehaviour
                 var spring = ballA.AddComponent<SpringJoint2D>();
                 spring.connectedBody = ballB;
                 spring.autoConfigureDistance = true;
-                spring.dampingRatio = 0.3f;
-                spring.frequency = 2.5f;
+                spring.dampingRatio = dampingRatio;
+                spring.frequency = frequency;
                 _springs.Add(spring);
             }
         }
@@ -67,8 +71,8 @@ public class PlayerBody : MonoBehaviour
             var sprint = ball.AddComponent<SpringJoint2D>();
             sprint.connectedBody = spriteBody;
             sprint.autoConfigureDistance = true;
-            sprint.dampingRatio = 0.3f;
-            sprint.frequency = 2.5f;
+            sprint.dampingRatio = dampingRatio;
+            sprint.frequency = frequency;
         }
 
         _mesh = new Mesh();
@@ -147,37 +151,38 @@ public class PlayerBody : MonoBehaviour
         }
     }
 
+    void SetLinearDamping(float newLinearDamping)
+    {
+        if(_currentLinearDamping == newLinearDamping) return;
+        _currentLinearDamping = newLinearDamping;
+
+        foreach(var i in _ballBodies)
+        {
+            i.linearDamping = _currentLinearDamping;
+        }
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {        
-        // if (Input.GetKeyDown( KeyCode.Space))
-        // {
-        //     SetRadious(3f);
-        //     // foreach(var ball in _balls)
-        //     // {
-        //     //     ball.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
-        //     // }
-        //     // Debug.Log("UP");
-        // }
-        UpdateMesh();
-
+    void FixedUpdate()
+    {
         if (Input.GetKey( KeyCode.Space))
         {
             SetRadious(2f);
+            SetLinearDamping(1.5f);
             foreach(var ball in _ballBodies)
             {
-                ball.AddForce(Vector2.up * 1.2f, ForceMode2D.Force);
+                ball.AddForce(Vector2.up * 8f, ForceMode2D.Force);
             }
         }
         else
         {
             SetRadious(0.8f);
+            SetLinearDamping(0.1f);
         }
 
         if (Input.GetKey(KeyCode.A))
@@ -195,5 +200,10 @@ public class PlayerBody : MonoBehaviour
                 ball.AddForce(Vector2.right * 10);
             }
         }
+    }
+
+    void Update()
+    {        
+        UpdateMesh();
     }
 }
