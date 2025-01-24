@@ -1,0 +1,424 @@
+fileFormatVersion: 2
+guid: 401db1f0771889e4ba5e980775ab289c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1299191585792606864
+    second: FRONTVILLI_SPRITE_SHEET_0
+  - first:
+      213: 6909298615059871203
+    second: FRONTVILLI_SPRITE_SHEET_1
+  - first:
+      213: 5794781767994904742
+    second: FRONTVILLI_SPRITE_SHEET_2
+  - first:
+      213: 4445317300957125491
+    second: FRONTVILLI_SPRITE_SHEET_3
+  - first:
+      213: -4487902415070183027
+    second: FRONTVILLI_SPRITE_SHEET_4
+  - first:
+      213: -4375329124572505484
+    second: FRONTVILLI_SPRITE_SHEET_5
+  - first:
+      213: 4624070340641730586
+    second: FRONTVILLI_SPRITE_SHEET_6
+  - first:
+      213: 8123684835491570555
+    second: FRONTVILLI_SPRITE_SHEET_7
+  - first:
+      213: -6241322086854579728
+    second: FRONTVILLI_SPRITE_SHEET_8
+  - first:
+      213: -176617168101936115
+    second: FRONTVILLI_SPRITE_SHEET_9
+  - first:
+      213: 5184442526949550444
+    second: FRONTVILLI_SPRITE_SHEET_10
+  - first:
+      213: 5735421344691598096
+    second: FRONTVILLI_SPRITE_SHEET_11
+  - first:
+      213: -7328156122778740775
+    second: FRONTVILLI_SPRITE_SHEET_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FRONTVILLI_SPRITE_SHEET_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 31
+        width: 1011
+        height: 1059
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 32, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e5fdbdbb72c2ef50800000000000000
+      internalID: 6909298615059871203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FRONTVILLI_SPRITE_SHEET_2
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 31
+        width: 964
+        height: 1032
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a01f30e0533b6050800000000000000
+      internalID: 5794781767994904742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FRONTVILLI_SPRITE_SHEET_3
+      rect:
+        serializedVersion: 2
+        x: 2239
+        y: 31
+        width: 930
+        height: 1032
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37b927d6880f0bd30800000000000000
+      internalID: 4445317300957125491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FRONTVILLI_SPRITE_SHEET_4
+      rect:
+        serializedVersion: 2
+        x: 3347
+        y: 31
+        width: 909
+        height: 1028
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d81cf1b0884c7b1c0800000000000000
+      internalID: -4487902415070183027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FRONTVILLI_SPRITE_SHEET_5
+      rect:
+        serializedVersion: 2
+        x: 4517
+        y: 31
+        width: 909
+        height: 1015
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47a5f6ab755b743c0800000000000000
+      internalID: -4375329124572505484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FRONTVILLI_SPRITE_SHEET_6
+      rect:
+        serializedVersion: 2
+        x: 5687
+        y: 31
+        width: 909
+        height: 1003
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a10be56b97ffb2040800000000000000
+      internalID: 4624070340641730586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FRONTVILLI_SPRITE_SHEET_7
+      rect:
+        serializedVersion: 2
+        x: 6823
+        y: 31
+        width: 900
+        height: 994
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b73e3b611502db070800000000000000
+      internalID: 8123684835491570555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FRONTVILLI_SPRITE_SHEET_8
+      rect:
+        serializedVersion: 2
+        x: 7901
+        y: 39
+        width: 917
+        height: 998
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f9ab3441ae5269a0800000000000000
+      internalID: -6241322086854579728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FRONTVILLI_SPRITE_SHEET_9
+      rect:
+        serializedVersion: 2
+        x: 8996
+        y: 39
+        width: 938
+        height: 1007
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d047c021f978c8df0800000000000000
+      internalID: -176617168101936115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FRONTVILLI_SPRITE_SHEET_10
+      rect:
+        serializedVersion: 2
+        x: 10161
+        y: 39
+        width: 955
+        height: 1015
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c69a1498207d2f740800000000000000
+      internalID: 5184442526949550444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FRONTVILLI_SPRITE_SHEET_12
+      rect:
+        serializedVersion: 2
+        x: 11200
+        y: 39
+        width: 1001
+        height: 1051
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d75b2325d82d4a90800000000000000
+      internalID: -7328156122778740775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 698b7fe67728fc14d81f0becf9ddd9fb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FRONTVILLI_SPRITE_SHEET_0: 1299191585792606864
+      FRONTVILLI_SPRITE_SHEET_1: 6909298615059871203
+      FRONTVILLI_SPRITE_SHEET_10: 5184442526949550444
+      FRONTVILLI_SPRITE_SHEET_11: 5735421344691598096
+      FRONTVILLI_SPRITE_SHEET_12: -7328156122778740775
+      FRONTVILLI_SPRITE_SHEET_2: 5794781767994904742
+      FRONTVILLI_SPRITE_SHEET_3: 4445317300957125491
+      FRONTVILLI_SPRITE_SHEET_4: -4487902415070183027
+      FRONTVILLI_SPRITE_SHEET_5: -4375329124572505484
+      FRONTVILLI_SPRITE_SHEET_6: 4624070340641730586
+      FRONTVILLI_SPRITE_SHEET_7: 8123684835491570555
+      FRONTVILLI_SPRITE_SHEET_8: -6241322086854579728
+      FRONTVILLI_SPRITE_SHEET_9: -176617168101936115
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

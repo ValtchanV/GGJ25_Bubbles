@@ -1,0 +1,1577 @@
+fileFormatVersion: 2
+guid: beb535679d0ba2448aadb350f74ba4bd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3755253080568453954
+    second: GUM_SPRITE_0
+  - first:
+      213: -5546086401097324037
+    second: GUM_SPRITE_1
+  - first:
+      213: -8285058995590886668
+    second: GUM_SPRITE_2
+  - first:
+      213: -7745237941282568001
+    second: GUM_SPRITE_3
+  - first:
+      213: 7556508429226641170
+    second: GUM_SPRITE_4
+  - first:
+      213: -8780791361522132448
+    second: GUM_SPRITE_5
+  - first:
+      213: 7944780614974600537
+    second: GUM_SPRITE_6
+  - first:
+      213: 7331760000982723000
+    second: GUM_SPRITE_7
+  - first:
+      213: -7221144414136884931
+    second: GUM_SPRITE_8
+  - first:
+      213: 165990923587387706
+    second: GUM_SPRITE_9
+  - first:
+      213: -1269957896564219677
+    second: GUM_SPRITE_10
+  - first:
+      213: 783877640800145731
+    second: GUM_SPRITE_11
+  - first:
+      213: 8053198964586282097
+    second: GUM_SPRITE_12
+  - first:
+      213: -3396631688802813958
+    second: GUM_SPRITE_13
+  - first:
+      213: -2131556857999374869
+    second: GUM_SPRITE_14
+  - first:
+      213: 5150304535048926073
+    second: GUM_SPRITE_15
+  - first:
+      213: -2890169468489600421
+    second: GUM_SPRITE_16
+  - first:
+      213: -4473418099835093941
+    second: GUM_SPRITE_17
+  - first:
+      213: -5549902516679366236
+    second: GUM_SPRITE_18
+  - first:
+      213: -4231165145250910076
+    second: GUM_SPRITE_19
+  - first:
+      213: 2616201382230078530
+    second: GUM_SPRITE_20
+  - first:
+      213: -3039900878644956661
+    second: GUM_SPRITE_21
+  - first:
+      213: -625175717638208048
+    second: GUM_SPRITE_22
+  - first:
+      213: -6839838661863781927
+    second: GUM_SPRITE_23
+  - first:
+      213: -2836298402022179338
+    second: GUM_SPRITE_24
+  - first:
+      213: 58923030033723274
+    second: GUM_SPRITE_25
+  - first:
+      213: 3995174659999869002
+    second: GUM_SPRITE_26
+  - first:
+      213: -4566928122011653738
+    second: GUM_SPRITE_27
+  - first:
+      213: -8907827735386747310
+    second: GUM_SPRITE_28
+  - first:
+      213: 3433584117362647658
+    second: GUM_SPRITE_29
+  - first:
+      213: -8458353200032575497
+    second: GUM_SPRITE_30
+  - first:
+      213: 4203745323571247202
+    second: GUM_SPRITE_31
+  - first:
+      213: 8099762284424752174
+    second: GUM_SPRITE_32
+  - first:
+      213: 1372291859554943797
+    second: GUM_SPRITE_33
+  - first:
+      213: 8664339548518293846
+    second: GUM_SPRITE_34
+  - first:
+      213: 8259893179545907765
+    second: GUM_SPRITE_35
+  - first:
+      213: 7647428295196140210
+    second: GUM_SPRITE_36
+  - first:
+      213: -4561004552406764750
+    second: GUM_SPRITE_37
+  - first:
+      213: 6403309589648489826
+    second: GUM_SPRITE_38
+  - first:
+      213: -1907078364028013664
+    second: GUM_SPRITE_39
+  - first:
+      213: 706177612443159586
+    second: GUM_SPRITE_40
+  - first:
+      213: -272878315911852697
+    second: GUM_SPRITE_41
+  - first:
+      213: 1765907377745389210
+    second: GUM_SPRITE_42
+  - first:
+      213: -397314181427336827
+    second: GUM_SPRITE_43
+  - first:
+      213: -6197621012567197021
+    second: GUM_SPRITE_44
+  - first:
+      213: 5111386431912007125
+    second: GUM_SPRITE_45
+  - first:
+      213: -5248789670602862419
+    second: GUM_SPRITE_46
+  - first:
+      213: 9113657289100151503
+    second: GUM_SPRITE_47
+  - first:
+      213: 8598645468985555897
+    second: GUM_SPRITE_48
+  - first:
+      213: -1786206804117227360
+    second: GUM_SPRITE_49
+  - first:
+      213: 5654845870772870984
+    second: GUM_SPRITE_50
+  - first:
+      213: -2662886134995845713
+    second: GUM_SPRITE_51
+  - first:
+      213: -4540078443313246216
+    second: GUM_SPRITE_52
+  - first:
+      213: -4804002055909190687
+    second: GUM_SPRITE_53
+  - first:
+      213: -3430911592613543952
+    second: GUM_SPRITE_54
+  - first:
+      213: 5229637354967918327
+    second: GUM_SPRITE_55
+  - first:
+      213: 7667550363119475807
+    second: GUM_SPRITE_56
+  - first:
+      213: -478535663953002627
+    second: GUM_SPRITE_57
+  - first:
+      213: 7485303804297667523
+    second: GUM_SPRITE_58
+  - first:
+      213: 1706996854701484982
+    second: GUM_SPRITE_59
+  - first:
+      213: -8101098442471397921
+    second: GUM_SPRITE_60
+  - first:
+      213: 4754104743837725261
+    second: GUM_SPRITE_61
+  - first:
+      213: 6763092642066314729
+    second: GUM_SPRITE_62
+  - first:
+      213: 7832481732552017160
+    second: GUM_SPRITE_63
+  - first:
+      213: 1078416440703612445
+    second: GUM_SPRITE_64
+  - first:
+      213: -6733386610794793920
+    second: GUM_SPRITE_65
+  - first:
+      213: -4154734401041126351
+    second: GUM_SPRITE_66
+  - first:
+      213: 2400088447618924110
+    second: GUM_SPRITE_67
+  - first:
+      213: -5503808462503913881
+    second: GUM_SPRITE_68
+  - first:
+      213: 4744731861222125788
+    second: GUM_SPRITE_69
+  - first:
+      213: -6854578974316421006
+    second: GUM_SPRITE_70
+  - first:
+      213: -5004774066558766026
+    second: GUM_SPRITE_71
+  - first:
+      213: 3801550762054924878
+    second: GUM_SPRITE_72
+  - first:
+      213: 6688261518524752119
+    second: GUM_SPRITE_73
+  - first:
+      213: 8303770261357425774
+    second: GUM_SPRITE_74
+  - first:
+      213: -7877735735967756214
+    second: GUM_SPRITE_75
+  - first:
+      213: 7193790065979900279
+    second: GUM_SPRITE_76
+  - first:
+      213: 4984817366735807750
+    second: GUM_SPRITE_77
+  - first:
+      213: -8441197083796006329
+    second: GUM_SPRITE_78
+  - first:
+      213: -3515793756731137369
+    second: GUM_SPRITE_79
+  - first:
+      213: 4297315545531165027
+    second: GUM_SPRITE_80
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GUM_SPRITE_0
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 6045
+        width: 830
+        height: 842
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb4a60b2839a2ebc0800000000000000
+      internalID: -3755253080568453954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_1
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 5919
+        width: 820
+        height: 937
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf928f87dc75803b0800000000000000
+      internalID: -5546086401097324037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_2
+      rect:
+        serializedVersion: 2
+        x: 2224
+        y: 6148
+        width: 654
+        height: 708
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fa86a85dbe850d80800000000000000
+      internalID: -8285058995590886668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_3
+      rect:
+        serializedVersion: 2
+        x: 3176
+        y: 6134
+        width: 662
+        height: 704
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb889f0e023638490800000000000000
+      internalID: -7745237941282568001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_4
+      rect:
+        serializedVersion: 2
+        x: 4119
+        y: 6014
+        width: 819
+        height: 824
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2178c4a516c1ed860800000000000000
+      internalID: 7556508429226641170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_5
+      rect:
+        serializedVersion: 2
+        x: 5341
+        y: 6078
+        width: 816
+        height: 760
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02a97a187cc542680800000000000000
+      internalID: -8780791361522132448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_6
+      rect:
+        serializedVersion: 2
+        x: 6974
+        y: 6386
+        width: 224
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95578f540e7814e60800000000000000
+      internalID: 7944780614974600537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_7
+      rect:
+        serializedVersion: 2
+        x: 8015
+        y: 6373
+        width: 249
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b92ef420e4afb560800000000000000
+      internalID: 7331760000982723000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_8
+      rect:
+        serializedVersion: 2
+        x: 9196
+        y: 6287
+        width: 473
+        height: 396
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3123932a6759cb90800000000000000
+      internalID: -7221144414136884931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_9
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 4901
+        width: 830
+        height: 1025
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a318d549dd7bd4200800000000000000
+      internalID: 165990923587387706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_10
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 4896
+        width: 825
+        height: 885
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e066978504306ee0800000000000000
+      internalID: -1269957896564219677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_11
+      rect:
+        serializedVersion: 2
+        x: 2224
+        y: 5185
+        width: 675
+        height: 744
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3419347af84e0ea00800000000000000
+      internalID: 783877640800145731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_12
+      rect:
+        serializedVersion: 2
+        x: 3147
+        y: 5174
+        width: 691
+        height: 712
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17c75b56ac5b2cf60800000000000000
+      internalID: 8053198964586282097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_13
+      rect:
+        serializedVersion: 2
+        x: 4119
+        y: 5227
+        width: 823
+        height: 697
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af7b214a97dbcd0d0800000000000000
+      internalID: -3396631688802813958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_14
+      rect:
+        serializedVersion: 2
+        x: 5332
+        y: 5244
+        width: 825
+        height: 756
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be54664c4503b62e0800000000000000
+      internalID: -2131556857999374869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_15
+      rect:
+        serializedVersion: 2
+        x: 6560
+        y: 4740
+        width: 1045
+        height: 1027
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 973bca8efae897740800000000000000
+      internalID: 5150304535048926073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_16
+      rect:
+        serializedVersion: 2
+        x: 8054
+        y: 4835
+        width: 954
+        height: 915
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b527ff16e2e04e7d0800000000000000
+      internalID: -2890169468489600421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_19
+      rect:
+        serializedVersion: 2
+        x: 9404
+        y: 4803
+        width: 947
+        height: 922
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4803e43d7b1e745c0800000000000000
+      internalID: -4231165145250910076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_25
+      rect:
+        serializedVersion: 2
+        x: 4123
+        y: 4264
+        width: 819
+        height: 823
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8fef320f2651d000800000000000000
+      internalID: 58923030033723274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_26
+      rect:
+        serializedVersion: 2
+        x: 5337
+        y: 4319
+        width: 816
+        height: 768
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a482fe89f26b17730800000000000000
+      internalID: 3995174659999869002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_30
+      rect:
+        serializedVersion: 2
+        x: 2224
+        y: 4267
+        width: 705
+        height: 694
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ff054f2494ed9a80800000000000000
+      internalID: -8458353200032575497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_31
+      rect:
+        serializedVersion: 2
+        x: 3133
+        y: 4243
+        width: 705
+        height: 712
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2687ca17914b65a30800000000000000
+      internalID: 4203745323571247202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_34
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 4099
+        width: 851
+        height: 753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6512dcae9eaed3870800000000000000
+      internalID: 8664339548518293846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_35
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 3995
+        width: 849
+        height: 861
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5327181851901a270800000000000000
+      internalID: 8259893179545907765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_36
+      rect:
+        serializedVersion: 2
+        x: 4123
+        y: 3431
+        width: 824
+        height: 697
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b2ef64448f112a60800000000000000
+      internalID: 7647428295196140210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_37
+      rect:
+        serializedVersion: 2
+        x: 5326
+        y: 3420
+        width: 825
+        height: 742
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 233fada568e04b0c0800000000000000
+      internalID: -4561004552406764750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_40
+      rect:
+        serializedVersion: 2
+        x: 9235
+        y: 3047
+        width: 1151
+        height: 1244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22c020a0cc8dcc900800000000000000
+      internalID: 706177612443159586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_43
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 3002
+        width: 845
+        height: 1010
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5896cc76bd47c7af0800000000000000
+      internalID: -397314181427336827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_44
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 2997
+        width: 838
+        height: 940
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aa7f658680adf9a0800000000000000
+      internalID: -6197621012567197021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_45
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 3294
+        width: 687
+        height: 744
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d5ddd7e0ea4fe640800000000000000
+      internalID: 5111386431912007125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_46
+      rect:
+        serializedVersion: 2
+        x: 3133
+        y: 3294
+        width: 667
+        height: 738
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da01af69a9d8827b0800000000000000
+      internalID: -5248789670602862419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_49
+      rect:
+        serializedVersion: 2
+        x: 7597
+        y: 3863
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a8f439106e1637e0800000000000000
+      internalID: -1786206804117227360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_55
+      rect:
+        serializedVersion: 2
+        x: 8006
+        y: 3593
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f6e9fe6777639840800000000000000
+      internalID: 5229637354967918327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_57
+      rect:
+        serializedVersion: 2
+        x: 7861
+        y: 3511
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7fb9b95956eb59f0800000000000000
+      internalID: -478535663953002627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_59
+      rect:
+        serializedVersion: 2
+        x: 7318
+        y: 3108
+        width: 931
+        height: 1068
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bbe035689870b710800000000000000
+      internalID: 1706996854701484982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_65
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1494
+        width: 1237
+        height: 1292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04474307d843e82a0800000000000000
+      internalID: -6733386610794793920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_66
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 1487
+        width: 1245
+        height: 1299
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13c29d1331b6756c0800000000000000
+      internalID: -4154734401041126351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_67
+      rect:
+        serializedVersion: 2
+        x: 2791
+        y: 1422
+        width: 1258
+        height: 1311
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4e38d51ab3de4120800000000000000
+      internalID: 2400088447618924110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_68
+      rect:
+        serializedVersion: 2
+        x: 4121
+        y: 1415
+        width: 1270
+        height: 1318
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7665aa02d5b8e93b0800000000000000
+      internalID: -5503808462503913881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_69
+      rect:
+        serializedVersion: 2
+        x: 5463
+        y: 1395
+        width: 1266
+        height: 1303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd07f963d7ca8d140800000000000000
+      internalID: 4744731861222125788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_70
+      rect:
+        serializedVersion: 2
+        x: 6801
+        y: 1395
+        width: 1265
+        height: 1302
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 270220f6db4afd0a0800000000000000
+      internalID: -6854578974316421006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_71
+      rect:
+        serializedVersion: 2
+        x: 8138
+        y: 1395
+        width: 1259
+        height: 1300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6347dadb0887b8ab0800000000000000
+      internalID: -5004774066558766026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_72
+      rect:
+        serializedVersion: 2
+        x: 9469
+        y: 1395
+        width: 1245
+        height: 1296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4a36efc642d1c430800000000000000
+      internalID: 3801550762054924878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_73
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 197
+        width: 1047
+        height: 1079
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f025984a6a71dc50800000000000000
+      internalID: 6688261518524752119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_74
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 205
+        width: 1047
+        height: 1071
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6479a4be0bec3370800000000000000
+      internalID: 8303770261357425774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_75
+      rect:
+        serializedVersion: 2
+        x: 2536
+        y: 225
+        width: 1047
+        height: 1051
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a40dd3f0619aca290800000000000000
+      internalID: -7877735735967756214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_76
+      rect:
+        serializedVersion: 2
+        x: 3758
+        y: 224
+        width: 1047
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 771477f53f975d360800000000000000
+      internalID: 7193790065979900279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_77
+      rect:
+        serializedVersion: 2
+        x: 4934
+        y: 171
+        width: 1047
+        height: 1045
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6056c7efbf0ad2540800000000000000
+      internalID: 4984817366735807750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_78
+      rect:
+        serializedVersion: 2
+        x: 6149
+        y: 125
+        width: 1047
+        height: 1053
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74a9645c9f7dada80800000000000000
+      internalID: -8441197083796006329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_79
+      rect:
+        serializedVersion: 2
+        x: 7344
+        y: 125
+        width: 1047
+        height: 1072
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a2218aa434653fc0800000000000000
+      internalID: -3515793756731137369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUM_SPRITE_80
+      rect:
+        serializedVersion: 2
+        x: 8566
+        y: 101
+        width: 1047
+        height: 1100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 369262378b123ab30800000000000000
+      internalID: 4297315545531165027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2214e01335e191c40ac465c1b9686cd1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      GUM_SPRITE_0: -3755253080568453954
+      GUM_SPRITE_1: -5546086401097324037
+      GUM_SPRITE_10: -1269957896564219677
+      GUM_SPRITE_11: 783877640800145731
+      GUM_SPRITE_12: 8053198964586282097
+      GUM_SPRITE_13: -3396631688802813958
+      GUM_SPRITE_14: -2131556857999374869
+      GUM_SPRITE_15: 5150304535048926073
+      GUM_SPRITE_16: -2890169468489600421
+      GUM_SPRITE_17: -4473418099835093941
+      GUM_SPRITE_18: -5549902516679366236
+      GUM_SPRITE_19: -4231165145250910076
+      GUM_SPRITE_2: -8285058995590886668
+      GUM_SPRITE_20: 2616201382230078530
+      GUM_SPRITE_21: -3039900878644956661
+      GUM_SPRITE_22: -625175717638208048
+      GUM_SPRITE_23: -6839838661863781927
+      GUM_SPRITE_24: -2836298402022179338
+      GUM_SPRITE_25: 58923030033723274
+      GUM_SPRITE_26: 3995174659999869002
+      GUM_SPRITE_27: -4566928122011653738
+      GUM_SPRITE_28: -8907827735386747310
+      GUM_SPRITE_29: 3433584117362647658
+      GUM_SPRITE_3: -7745237941282568001
+      GUM_SPRITE_30: -8458353200032575497
+      GUM_SPRITE_31: 4203745323571247202
+      GUM_SPRITE_32: 8099762284424752174
+      GUM_SPRITE_33: 1372291859554943797
+      GUM_SPRITE_34: 8664339548518293846
+      GUM_SPRITE_35: 8259893179545907765
+      GUM_SPRITE_36: 7647428295196140210
+      GUM_SPRITE_37: -4561004552406764750
+      GUM_SPRITE_38: 6403309589648489826
+      GUM_SPRITE_39: -1907078364028013664
+      GUM_SPRITE_4: 7556508429226641170
+      GUM_SPRITE_40: 706177612443159586
+      GUM_SPRITE_41: -272878315911852697
+      GUM_SPRITE_42: 1765907377745389210
+      GUM_SPRITE_43: -397314181427336827
+      GUM_SPRITE_44: -6197621012567197021
+      GUM_SPRITE_45: 5111386431912007125
+      GUM_SPRITE_46: -5248789670602862419
+      GUM_SPRITE_47: 9113657289100151503
+      GUM_SPRITE_48: 8598645468985555897
+      GUM_SPRITE_49: -1786206804117227360
+      GUM_SPRITE_5: -8780791361522132448
+      GUM_SPRITE_50: 5654845870772870984
+      GUM_SPRITE_51: -2662886134995845713
+      GUM_SPRITE_52: -4540078443313246216
+      GUM_SPRITE_53: -4804002055909190687
+      GUM_SPRITE_54: -3430911592613543952
+      GUM_SPRITE_55: 5229637354967918327
+      GUM_SPRITE_56: 7667550363119475807
+      GUM_SPRITE_57: -478535663953002627
+      GUM_SPRITE_58: 7485303804297667523
+      GUM_SPRITE_59: 1706996854701484982
+      GUM_SPRITE_6: 7944780614974600537
+      GUM_SPRITE_60: -8101098442471397921
+      GUM_SPRITE_61: 4754104743837725261
+      GUM_SPRITE_62: 6763092642066314729
+      GUM_SPRITE_63: 7832481732552017160
+      GUM_SPRITE_64: 1078416440703612445
+      GUM_SPRITE_65: -6733386610794793920
+      GUM_SPRITE_66: -4154734401041126351
+      GUM_SPRITE_67: 2400088447618924110
+      GUM_SPRITE_68: -5503808462503913881
+      GUM_SPRITE_69: 4744731861222125788
+      GUM_SPRITE_7: 7331760000982723000
+      GUM_SPRITE_70: -6854578974316421006
+      GUM_SPRITE_71: -5004774066558766026
+      GUM_SPRITE_72: 3801550762054924878
+      GUM_SPRITE_73: 6688261518524752119
+      GUM_SPRITE_74: 8303770261357425774
+      GUM_SPRITE_75: -7877735735967756214
+      GUM_SPRITE_76: 7193790065979900279
+      GUM_SPRITE_77: 4984817366735807750
+      GUM_SPRITE_78: -8441197083796006329
+      GUM_SPRITE_79: -3515793756731137369
+      GUM_SPRITE_8: -7221144414136884931
+      GUM_SPRITE_80: 4297315545531165027
+      GUM_SPRITE_81: 1777365577
+      GUM_SPRITE_9: 165990923587387706
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

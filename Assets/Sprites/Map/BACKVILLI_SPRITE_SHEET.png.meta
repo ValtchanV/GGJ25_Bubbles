@@ -1,0 +1,456 @@
+fileFormatVersion: 2
+guid: bb3c5c27fd90eea4c9cd1a22afb7289b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7680377965201013525
+    second: BACKVILLI_SPRITE_SHEET_0
+  - first:
+      213: 6667304205606070911
+    second: BACKVILLI_SPRITE_SHEET_1
+  - first:
+      213: 8754507186111282539
+    second: BACKVILLI_SPRITE_SHEET_2
+  - first:
+      213: -856325345221128289
+    second: BACKVILLI_SPRITE_SHEET_3
+  - first:
+      213: 2882157194073294007
+    second: BACKVILLI_SPRITE_SHEET_4
+  - first:
+      213: -3444363816951953467
+    second: BACKVILLI_SPRITE_SHEET_5
+  - first:
+      213: 499133705041159407
+    second: BACKVILLI_SPRITE_SHEET_6
+  - first:
+      213: 593689638590235891
+    second: BACKVILLI_SPRITE_SHEET_7
+  - first:
+      213: 4405083925234179602
+    second: BACKVILLI_SPRITE_SHEET_8
+  - first:
+      213: 2677641588341038731
+    second: BACKVILLI_SPRITE_SHEET_9
+  - first:
+      213: 8134050511912338934
+    second: BACKVILLI_SPRITE_SHEET_10
+  - first:
+      213: -5866196191952365141
+    second: BACKVILLI_SPRITE_SHEET_11
+  - first:
+      213: 8738797349764547437
+    second: BACKVILLI_SPRITE_SHEET_12
+  - first:
+      213: 7392721713891654282
+    second: BACKVILLI_SPRITE_SHEET_13
+  - first:
+      213: 8093121621800627005
+    second: BACKVILLI_SPRITE_SHEET_14
+  - first:
+      213: 7083748214331167779
+    second: BACKVILLI_SPRITE_SHEET_15
+  - first:
+      213: -1427355662808904768
+    second: BACKVILLI_SPRITE_SHEET_16
+  - first:
+      213: -2359608623315310161
+    second: BACKVILLI_SPRITE_SHEET_17
+  - first:
+      213: -6838303796968355577
+    second: BACKVILLI_SPRITE_SHEET_18
+  - first:
+      213: -6738457786608238418
+    second: BACKVILLI_SPRITE_SHEET_19
+  - first:
+      213: 6779930391752920326
+    second: BACKVILLI_SPRITE_SHEET_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BACKVILLI_SPRITE_SHEET_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 115
+        width: 674
+        height: 939
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 29, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7a2e90a9d5078c50800000000000000
+      internalID: 6667304205606070911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BACKVILLI_SPRITE_SHEET_3
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 115
+        width: 660
+        height: 939
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9f4ee1b2a8bd14f0800000000000000
+      internalID: -856325345221128289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BACKVILLI_SPRITE_SHEET_5
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 115
+        width: 643
+        height: 975
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c7ce558b592330d0800000000000000
+      internalID: -3444363816951953467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BACKVILLI_SPRITE_SHEET_6
+      rect:
+        serializedVersion: 2
+        x: 2504
+        y: 115
+        width: 626
+        height: 956
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe42760d5774de600800000000000000
+      internalID: 499133705041159407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BACKVILLI_SPRITE_SHEET_8
+      rect:
+        serializedVersion: 2
+        x: 3287
+        y: 115
+        width: 637
+        height: 927
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21edd59ad70022d30800000000000000
+      internalID: 4405083925234179602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BACKVILLI_SPRITE_SHEET_10
+      rect:
+        serializedVersion: 2
+        x: 4074
+        y: 115
+        width: 639
+        height: 927
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f58e9338d3f1e070800000000000000
+      internalID: 8134050511912338934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BACKVILLI_SPRITE_SHEET_12
+      rect:
+        serializedVersion: 2
+        x: 4876
+        y: 115
+        width: 650
+        height: 922
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6347d4b3e1764970800000000000000
+      internalID: 8738797349764547437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BACKVILLI_SPRITE_SHEET_14
+      rect:
+        serializedVersion: 2
+        x: 5765
+        y: 115
+        width: 637
+        height: 907
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3ba57f5c3b805070800000000000000
+      internalID: 8093121621800627005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BACKVILLI_SPRITE_SHEET_16
+      rect:
+        serializedVersion: 2
+        x: 6629
+        y: 115
+        width: 650
+        height: 897
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cb022e4693013ce0800000000000000
+      internalID: -1427355662808904768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BACKVILLI_SPRITE_SHEET_18
+      rect:
+        serializedVersion: 2
+        x: 7522
+        y: 111
+        width: 623
+        height: 897
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7090f737de67911a0800000000000000
+      internalID: -6838303796968355577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BACKVILLI_SPRITE_SHEET_20
+      rect:
+        serializedVersion: 2
+        x: 8319
+        y: 111
+        width: 633
+        height: 932
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60dce4a05c6271e50800000000000000
+      internalID: 6779930391752920326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6e354aa660838314b958dfd09afbd57a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BACKVILLI_SPRITE_SHEET_0: -7680377965201013525
+      BACKVILLI_SPRITE_SHEET_1: 6667304205606070911
+      BACKVILLI_SPRITE_SHEET_10: 8134050511912338934
+      BACKVILLI_SPRITE_SHEET_11: -5866196191952365141
+      BACKVILLI_SPRITE_SHEET_12: 8738797349764547437
+      BACKVILLI_SPRITE_SHEET_13: 7392721713891654282
+      BACKVILLI_SPRITE_SHEET_14: 8093121621800627005
+      BACKVILLI_SPRITE_SHEET_15: 7083748214331167779
+      BACKVILLI_SPRITE_SHEET_16: -1427355662808904768
+      BACKVILLI_SPRITE_SHEET_17: -2359608623315310161
+      BACKVILLI_SPRITE_SHEET_18: -6838303796968355577
+      BACKVILLI_SPRITE_SHEET_19: -6738457786608238418
+      BACKVILLI_SPRITE_SHEET_2: 8754507186111282539
+      BACKVILLI_SPRITE_SHEET_20: 6779930391752920326
+      BACKVILLI_SPRITE_SHEET_3: -856325345221128289
+      BACKVILLI_SPRITE_SHEET_4: 2882157194073294007
+      BACKVILLI_SPRITE_SHEET_5: -3444363816951953467
+      BACKVILLI_SPRITE_SHEET_6: 499133705041159407
+      BACKVILLI_SPRITE_SHEET_7: 593689638590235891
+      BACKVILLI_SPRITE_SHEET_8: 4405083925234179602
+      BACKVILLI_SPRITE_SHEET_9: 2677641588341038731
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
