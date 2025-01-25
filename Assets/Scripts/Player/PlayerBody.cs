@@ -1,10 +1,14 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
 /*
+TODO: 
+    Move soft body geometry location
+    Better geometry using ray casting
+    stick to walls
+
     speed limits
     When big: 
         Not sticky
@@ -13,12 +17,7 @@ using UnityEngine;
         more linear dampening
     
     when small
-
-    
-
-
 */
-
 
 public class PlayerBody : MonoBehaviour
 {
@@ -29,8 +28,10 @@ public class PlayerBody : MonoBehaviour
     [SerializeField] float BigRadious = 2.2f;
     List<Rigidbody2D> _ballBodies = new ();
     List<Transform> _ballTransforms = new ();
-    Transform _spriteTransforms;
-    List<SpringJoint2D> _springs = new ();
+    List<SpringJoint2D> _ballSprings = new ();
+    Rigidbody2D _coreBody;
+    Transform _coreTransform;
+    List<SpringJoint2D> _coreSprings = new ();
 
     float _currentRadious = 0.8f;
     float _currentLinearDamping = 0.3f;
@@ -40,6 +41,108 @@ public class PlayerBody : MonoBehaviour
     private Vector3[] _meshVertices;
     private Vector2[] _meshUV;
     private int[] _meshTriangles;    
+
+
+
+    // active soft body params
+    PhysicsMaterial2D _ballPhysicsMat = null;
+    CachedParam _sbp_pmatFriction = new CachedParam(0.4f);
+    CachedParam _sbp_pmatBounciness = new CachedParam(0);
+    CachedParam _sbp_c_massRatio = new CachedParam(0.001f);
+    CachedParam _sbp_totalMass = new CachedParam(1);
+    CachedParam _sbp_c_ldamp = new CachedParam(0);
+    CachedParam _sbp_b_ldamp = new CachedParam(0);
+    CachedParam _sbp_c_adamp = new CachedParam(0);
+    CachedParam _sbp_b_adamp = new CachedParam(0);
+    CachedParam _sbap_c_sdamp = new CachedParam(0.1f);
+    CachedParam _sbp_b_sdamp = new CachedParam(0.1f);
+    CachedParam _sbp_c_frequency = new CachedParam(2.5f);
+    CachedParam _sbp_b_frequency = new CachedParam(2.5f);
+    CachedParam _sbp_c_gravity = new CachedParam(1);
+    CachedParam _sbp_b_gravity = new CachedParam(1);
+    CachedParam _sbp_b_freezeRotation = new CachedParam(1);
+    CachedParam _sbp_showBones = new CachedParam(true);
+
+    float _maxRotationVelocity = 1000;
+    float _maxMovementVelocity = 1000;
+
+    void UpdateSoftBody_PhysicsMat()
+    {
+        var didChange = _ballPhysicsMat == null || _sbp_pmatFriction.Apply() || _sbp_pmatBounciness.Apply();
+        if (!didChange) return;
+        
+        _ballPhysicsMat = new PhysicsMaterial2D {
+            bounceCombine = PhysicsMaterialCombine2D.Maximum,
+            frictionCombine = PhysicsMaterialCombine2D.Maximum,
+        };
+        
+        foreach (var ball in _ballBodies) ball.sharedMaterial = _ballPhysicsMat;
+    }
+    
+    void UpdateSoftBody_Mass()
+    {
+        var didChange = _sbp_c_massRatio.Apply() || _sbp_totalMass.Apply();
+        if (!didChange) return;
+
+        var centerMass = _sbp_c_massRatio.Value * _sbp_totalMass.Value;
+        var ballMass =  (_sbp_totalMass.Value - centerMass) / ShapePointCount;        
+        
+        _coreBody.mass = centerMass;
+        foreach (var i in _ballBodies) i.mass = ballMass;
+    }
+
+    void UpdateSoftBody_BallConstraints()
+    {
+        var didChange = _sbp_b_freezeRotation.Apply();
+        if (!didChange) return;
+        var newValue =  _freezeRotation ? RigidbodyConstraints2D.FreezeRotation : RigidbodyConstraints2D.None;
+        foreach (var i in _ballBodies) i.constraints = newValue;
+    }
+
+    void UpdateSoftBody_CenterBodyCommon()
+    {
+        var didChange = _sbp_c_ldamp.Apply() || _sbp_c_adamp.Apply() || _sbp_c_gravity.Apply();
+        if (!didChange) return;
+        
+        _coreBody.linearDamping = _sbp_c_ldamp.Value;
+        _coreBody.angularDamping = _sbp_c_adamp.Value;
+        _coreBody.gravityScale = _sbp_c_gravity.Value;
+    }
+
+    void UpdateSoftBody_BallBodyCommon()
+    {
+        var didChange = _sbp_b_ldamp.Apply() || _sbp_b_adamp.Apply() || _sbp_b_gravity.Apply();
+        if (!didChange) return;
+        
+        foreach (var body in _ballBodies)
+        {
+            body.linearDamping = _sbp_b_ldamp.Value;
+            body.angularDamping = _sbp_b_adamp.Value;
+            body.gravityScale = _sbp_b_gravity.Value;
+        }
+    }
+
+    void UpdateSoftBody_Springs()
+    {
+        var didChange = _sbap_c_sdamp.Apply() || _sbp_b_sdamp.Apply() || _sbp_c_frequency.Apply()|| _sbp_b_frequency.Apply();
+        if (!didChange) return;
+        
+        foreach (var body in _ballBodies)
+        {
+            body.linearDamping = _sbp_b_ldamp.Value;
+            body.angularDamping = _sbp_b_adamp.Value;
+            body.gravityScale = _sbp_b_gravity.Value;
+        }
+    }
+
+    void UpdateSoftBodyParams()
+    {
+        UpdateSoftBody_PhysicsMat();
+        UpdateSoftBody_Mass();
+        UpdateSoftBody_BallConstraints();
+        UpdateSoftBody_CenterBodyCommon();
+        UpdateSoftBody_BallBodyCommon();
+    }
 
     void Awake()
     {
@@ -95,14 +198,15 @@ public class PlayerBody : MonoBehaviour
                 spring.autoConfigureDistance = true;
                 spring.dampingRatio = dampingRatio;
                 spring.frequency = frequency;
-                _springs.Add(spring);
+                _ballSprings.Add(spring);
             }
         }
 
-        _spriteTransforms = transform.Find("Sprite");
-        _spriteTransforms.Find("Circle").GetComponent<SpriteRenderer>().enabled = ShowBones;
+        _coreTransform = transform.Find("Sprite");
+        _coreBody = _coreTransform.GetComponent<Rigidbody2D>();
+        _coreTransform.Find("Circle").GetComponent<SpriteRenderer>().enabled = ShowBones;
 
-        var spriteBody = _spriteTransforms.GetComponent<Rigidbody2D>();
+        var spriteBody = _coreTransform.GetComponent<Rigidbody2D>();
         foreach (var ball in _ballBodies)
         {
             var sprint = ball.AddComponent<SpringJoint2D>();
@@ -110,11 +214,12 @@ public class PlayerBody : MonoBehaviour
             sprint.autoConfigureDistance = true;
             sprint.dampingRatio = dampingRatio;
             sprint.frequency = frequency;
+            _coreSprings.Add(sprint);
         }
 
         _mesh = new Mesh();
         _mesh.MarkDynamic();
-        _spriteTransforms.GetComponent<MeshFilter>().mesh = _mesh;
+        _coreTransform.GetComponent<MeshFilter>().mesh = _mesh;
         _meshVertices = new Vector3[ShapePointCount + 1];
         _meshVertices[0] = Vector3.zero;
         _meshTriangles = new int[(ShapePointCount + 1) * 3];
@@ -139,11 +244,10 @@ public class PlayerBody : MonoBehaviour
         UpdateMesh();
     }
 
-
     private void UpdateMesh()
     {
         var pointRadious = ShapePointSize / 2.0f;
-        var position = _spriteTransforms.position;
+        var position = _coreTransform.position;
         var i = 1;
         foreach(var ball in _ballTransforms)
         {
@@ -160,7 +264,7 @@ public class PlayerBody : MonoBehaviour
 
     private void AddRotationForce(float force)
     {
-        var position = _spriteTransforms.position;        
+        var position = _coreTransform.position;
         for(var i = 0; i < ShapePointCount; i++)
         {
             var v = (_ballTransforms[i].position - position).normalized;
@@ -192,10 +296,16 @@ public class PlayerBody : MonoBehaviour
             for (var ii = i + 1; ii < _ballBodies.Count; ii++)
             {
                 var pointB = points[ii];
-                var sprint = _springs[iSpring++];
+                var sprint = _ballSprings[iSpring++];
                 sprint.autoConfigureDistance = false;
                 sprint.distance = (float)Math.Sqrt(Math.Pow(pointB.x - pointA.x, 2) + Math.Pow(pointB.y - pointA.y, 2));
             }
+        }
+
+        foreach (var spring in _coreSprings)
+        {
+            spring.autoConfigureDistance = false;
+            spring.distance = pointOffset;
         }
     }
     
@@ -280,5 +390,36 @@ public class PlayerBody : MonoBehaviour
     void Update()
     {        
         UpdateMesh();
+    }
+
+
+    struct CachedParam
+    {
+        public CachedParam(float value)
+        {
+            Value = value;
+            ActiveValue = value;
+        }
+
+        public CachedParam(bool value)
+        {
+            Value = value ? 1 : 0;
+            ActiveValue = value ? 1 : 0;
+        }
+
+        public float Value;
+
+        public bool IsTrue { 
+            get => Value != 0f;
+            set => Value = value ? 1 : 0;
+        }
+
+        public float ActiveValue;
+        public bool Apply()
+        {
+            if (Value == ActiveValue) return false;
+            Value = ActiveValue;
+            return true;
+        }
     }
 }
