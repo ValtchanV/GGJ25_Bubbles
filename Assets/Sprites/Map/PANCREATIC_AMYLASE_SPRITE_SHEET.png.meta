@@ -1,0 +1,273 @@
+fileFormatVersion: 2
+guid: 4d53585e4cef45646a6cf57f68e9c153
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8259047884328264025
+    second: PANCREATIC_AMYLASE_SPRITE_SHEET_0
+  - first:
+      213: 2833940632193753653
+    second: PANCREATIC_AMYLASE_SPRITE_SHEET_1
+  - first:
+      213: 3706502672757530789
+    second: PANCREATIC_AMYLASE_SPRITE_SHEET_2
+  - first:
+      213: -1114298757214896506
+    second: PANCREATIC_AMYLASE_SPRITE_SHEET_3
+  - first:
+      213: -735133130699923516
+    second: PANCREATIC_AMYLASE_SPRITE_SHEET_4
+  - first:
+      213: 55051579960452784
+    second: PANCREATIC_AMYLASE_SPRITE_SHEET_5
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PANCREATIC_AMYLASE_SPRITE_SHEET_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 435
+        width: 633
+        height: 610
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ae1caf15b7f16d80800000000000000
+      internalID: -8259047884328264025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANCREATIC_AMYLASE_SPRITE_SHEET_1
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 355
+        width: 651
+        height: 689
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53264787dfd245720800000000000000
+      internalID: 2833940632193753653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANCREATIC_AMYLASE_SPRITE_SHEET_2
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 274
+        width: 639
+        height: 769
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a0afb00b84207330800000000000000
+      internalID: 3706502672757530789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANCREATIC_AMYLASE_SPRITE_SHEET_3
+      rect:
+        serializedVersion: 2
+        x: 2211
+        y: 249
+        width: 633
+        height: 796
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68efb822f273980f0800000000000000
+      internalID: -1114298757214896506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANCREATIC_AMYLASE_SPRITE_SHEET_4
+      rect:
+        serializedVersion: 2
+        x: 2922
+        y: 127
+        width: 653
+        height: 917
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cf920200584cc5f0800000000000000
+      internalID: -735133130699923516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANCREATIC_AMYLASE_SPRITE_SHEET_5
+      rect:
+        serializedVersion: 2
+        x: 3652
+        y: 25
+        width: 630
+        height: 1020
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b6eddbce1593c000800000000000000
+      internalID: 55051579960452784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 217c0b45cdc14c143a5f766651009b58
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PANCREATIC_AMYLASE_SPRITE_SHEET_0: -8259047884328264025
+      PANCREATIC_AMYLASE_SPRITE_SHEET_1: 2833940632193753653
+      PANCREATIC_AMYLASE_SPRITE_SHEET_2: 3706502672757530789
+      PANCREATIC_AMYLASE_SPRITE_SHEET_3: -1114298757214896506
+      PANCREATIC_AMYLASE_SPRITE_SHEET_4: -735133130699923516
+      PANCREATIC_AMYLASE_SPRITE_SHEET_5: 55051579960452784
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
