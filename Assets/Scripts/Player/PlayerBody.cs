@@ -206,16 +206,16 @@ public class PlayerBody : MonoBehaviour
         if (Input.GetKey( KeyCode.Space))
         {
             SetRadious(BigRadious);
-            SetLinearDamping(1.5f);
+            SetLinearDamping(1f);
             foreach(var ball in _ballBodies)
             {
-                ball.AddForce(Vector2.up * 8f, ForceMode2D.Force);
+                ball.AddForce(Vector2.up * 7f, ForceMode2D.Force);
             }
         }
         else
         {
             SetRadious(SmallRadious);
-            SetLinearDamping(0.1f);
+            SetLinearDamping(0.01f);
         }
 
         SetFreezeRotation(!Input.GetKey(KeyCode.LeftShift));
