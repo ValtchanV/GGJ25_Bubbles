@@ -21,12 +21,25 @@ TODO:
 
 public class PlayerBody : MonoBehaviour
 {
-    [SerializeField] bool ShowBones;
     [SerializeField] int ShapePointCount = 12;
     [SerializeField] float ShapePointSize = 0.3f;
     [SerializeField] float SmallRadious = 1f;
     [SerializeField] float BigRadious = 2.2f;
     
+    [SerializeField] float CoreMassRatio = 0.001f;
+    [SerializeField] float TotalMass = 1f;
+    [SerializeField] float CoreLinearDamping = 0f;
+    [SerializeField] float BallLinearDamping = 0f;
+    [SerializeField] float CoreAngularDamping = 0f;
+    [SerializeField] float BallAngularDamping = 0f;
+    [SerializeField] float CoreDampingRatio = 0.1f;
+    [SerializeField] float BallDampingRatio = 0.1f;
+    [SerializeField] float CoreFrequency = 2.5f;
+    [SerializeField] float BallFrequency = 2.5f;
+    [SerializeField] float CoreGravity = 1f;
+    [SerializeField] float BallGravity = 1f;
+    [SerializeField] bool ShowBones = false;
+
 
     List<Rigidbody2D> _ballBodies = new ();
     List<Transform> _ballTransforms = new ();
@@ -58,11 +71,29 @@ public class PlayerBody : MonoBehaviour
     CachedParam _sbp_b_distance = new CachedParam(0.8f);
     CachedParam _sbp_c_gravity = new CachedParam(1);
     CachedParam _sbp_b_gravity = new CachedParam(1);
-    CachedParam _sbp_b_freezeRotation = new CachedParam(1);
+    CachedParam _sbp_b_freezeRotation = new CachedParam(true);
     CachedParam _sbp_showBones = new CachedParam(true);
 
     private void OnValidate()
     {
+        _sbp_c_massRatio.Value = CoreMassRatio;
+        _sbp_totalMass.Value = TotalMass;
+        
+        _sbp_c_ldamp.Value = CoreLinearDamping;
+        _sbp_b_ldamp.Value = BallLinearDamping;
+        
+        _sbp_c_adamp.Value = CoreAngularDamping;
+        _sbp_b_adamp.Value = BallAngularDamping;
+        
+        _sbp_c_sdamp.Value = CoreDampingRatio;
+        _sbp_b_sdamp.Value = BallDampingRatio;
+    
+        _sbp_c_frequency.Value = CoreFrequency;
+        _sbp_b_frequency.Value = BallFrequency;
+        
+        _sbp_c_gravity.Value = CoreGravity;
+        _sbp_b_gravity.Value = BallGravity;
+
         _sbp_showBones.IsTrue = ShowBones;
     }
 
@@ -135,7 +166,6 @@ public class PlayerBody : MonoBehaviour
         {
             spring.distance = pointOffset;
         }
-        Debug.Log("Update Core Distance");
     }
 
     Vector2[] UpdateSoftBody_ballSpringLength_buffer = null;
@@ -367,8 +397,8 @@ public class PlayerBody : MonoBehaviour
 
         if (Input.GetKey( KeyCode.Space))
         {
-            _sbp_b_ldamp.Value = 1f;
-            _sbp_c_ldamp.Value = 1f;
+            // _sbp_b_ldamp.Value = 1f;
+            // _sbp_c_ldamp.Value = 1f;
             _sbp_b_distance.Value = BigRadious;
             _sbp_c_distance.Value = BigRadious;
 
@@ -379,8 +409,8 @@ public class PlayerBody : MonoBehaviour
         }
         else
         {
-            _sbp_b_ldamp.Value = 0.01f;
-            _sbp_c_ldamp.Value = 0.01f;
+            // _sbp_b_ldamp.Value = 0.01f;
+            // _sbp_c_ldamp.Value = 0.01f;
             _sbp_b_distance.Value = SmallRadious;
             _sbp_c_distance.Value = SmallRadious;
         }
