@@ -8,10 +8,14 @@ public class PlayerBody : MonoBehaviour
 {
     [SerializeField] bool ShowBones = false;
     [SerializeField] int ShapePointCount = 12;
+    [SerializeField] float ShapePointSize = 0.3f;
+    [SerializeField] float SmallRadious = 1f;
+    [SerializeField] float BigRadious = 2.2f;
     List<Rigidbody2D> _ballBodies = new ();
     List<Transform> _ballTransforms = new ();
     Transform _spriteTransforms;
     List<SpringJoint2D> _springs = new ();
+
     float _currentRadious = 0.8f;
     float _currentLinearDamping = 0.3f;
 
@@ -25,15 +29,17 @@ public class PlayerBody : MonoBehaviour
         var circleSprite = Resources.Load<Sprite>("Circle");
         var position = transform.position;
 
+        var pointOffset = _currentRadious - ShapePointSize / 2.0f;
+
         for (var i = 0; i < ShapePointCount; i++)
         {
             var a = Math.PI * 2.0 / ShapePointCount * i;
             
             var circle = new GameObject("Circle");
-            var x = (float)(Math.Cos(a) * _currentRadious) + position.x;
-            var y = (float)(Math.Sin(a) * _currentRadious) + position.y;
+            var x = (float)(Math.Cos(a) * pointOffset) + position.x;
+            var y = (float)(Math.Sin(a) * pointOffset) + position.y;
             circle.transform.position = new Vector3(x, y, position.z);            
-            circle.transform.localScale = new Vector3(0.3f, 0.3f, 1);
+            circle.transform.localScale = new Vector3(ShapePointSize, ShapePointSize, 1);
             _ballTransforms.Add(circle.transform);
             
             if (ShowBones)
@@ -45,6 +51,7 @@ public class PlayerBody : MonoBehaviour
 
             var rigidbody = circle.AddComponent<Rigidbody2D>();
             rigidbody.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+            rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
             _ballBodies.Add(rigidbody);
             
             var collider = circle.AddComponent<CircleCollider2D>();
@@ -112,11 +119,12 @@ public class PlayerBody : MonoBehaviour
 
     private void UpdateMesh()
     {
+        var pointRadious = ShapePointSize / 2.0f;
         var position = _spriteTransforms.position;
         var i = 1;
         foreach(var ball in _ballTransforms) {            
             var v = ball.position - position;
-            _meshVertices[i++] = v + (v.normalized * 0.18f);
+            _meshVertices[i++] = v + (v.normalized * pointRadious);
         }
 
         _mesh.Clear();
@@ -133,11 +141,13 @@ public class PlayerBody : MonoBehaviour
 
         var points = new Vector2[ShapePointCount];
 
+        var pointOffset = _currentRadious - ShapePointSize / 2.0f;
+
         for (var i = 0; i < ShapePointCount; i++)
         {
             var a = Math.PI * 2.0 / ShapePointCount * i;
-            var x = (float)(Math.Cos(a) * _currentRadious);
-            var y = (float)(Math.Sin(a) * _currentRadious);
+            var x = (float)(Math.Cos(a) * pointOffset);
+            var y = (float)(Math.Sin(a) * pointOffset);
             points[i] = new Vector2(x, y);
         }
         
@@ -176,7 +186,7 @@ public class PlayerBody : MonoBehaviour
     {
         if (Input.GetKey( KeyCode.Space))
         {
-            SetRadious(2f);
+            SetRadious(BigRadious);
             SetLinearDamping(1.5f);
             foreach(var ball in _ballBodies)
             {
@@ -185,7 +195,7 @@ public class PlayerBody : MonoBehaviour
         }
         else
         {
-            SetRadious(0.8f);
+            SetRadious(SmallRadious);
             SetLinearDamping(0.1f);
         }
 
