@@ -18,6 +18,7 @@ public class PlayerBody : MonoBehaviour
 
     float _currentRadious = 0.8f;
     float _currentLinearDamping = 0.3f;
+    bool _freezeRotation = true;
 
     Mesh _mesh;
     private Vector3[] _meshVertices;
@@ -28,7 +29,8 @@ public class PlayerBody : MonoBehaviour
     {
         var circleSprite = Resources.Load<Sprite>("Circle");
         var position = transform.position;
-
+        
+        _currentRadious = SmallRadious;
         var pointOffset = _currentRadious - ShapePointSize / 2.0f;
 
         for (var i = 0; i < ShapePointCount; i++)
@@ -51,7 +53,9 @@ public class PlayerBody : MonoBehaviour
 
             var rigidbody = circle.AddComponent<Rigidbody2D>();
             rigidbody.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-            rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+            rigidbody.constraints = _freezeRotation
+                ? RigidbodyConstraints2D.FreezeRotation
+                : RigidbodyConstraints2D.None ;
             _ballBodies.Add(rigidbody);
             
             var collider = circle.AddComponent<CircleCollider2D>();
@@ -164,6 +168,21 @@ public class PlayerBody : MonoBehaviour
             }
         }
     }
+    
+    void SetFreezeRotation(bool newFreezeRotation)
+    {
+        if(_freezeRotation == newFreezeRotation) return;
+        _freezeRotation = newFreezeRotation;
+
+        Debug.Log("_freezeRotation = " + _freezeRotation);
+        foreach (var i in _ballBodies)
+        {
+            i.constraints = _freezeRotation
+                ? RigidbodyConstraints2D.FreezeRotation
+                : RigidbodyConstraints2D.None ;
+        }
+    }
+
 
     void SetLinearDamping(float newLinearDamping)
     {
@@ -198,6 +217,8 @@ public class PlayerBody : MonoBehaviour
             SetRadious(SmallRadious);
             SetLinearDamping(0.1f);
         }
+
+        SetFreezeRotation(!Input.GetKey(KeyCode.LeftShift));
 
         if (Input.GetKey(KeyCode.A))
         {
