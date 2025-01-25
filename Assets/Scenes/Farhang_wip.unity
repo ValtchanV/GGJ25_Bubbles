@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 9753174}
   m_Layer: 0
   m_Name: Closed Sprite Shape (3)
-  m_TagString: Untagged
+  m_TagString: IntestineWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2057,7 +2057,7 @@ GameObject:
   - component: {fileID: 25243126}
   m_Layer: 0
   m_Name: Closed Sprite Shape
-  m_TagString: Untagged
+  m_TagString: IntestineWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2945,6 +2945,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1651291488662510950, guid: c05e3edd5e250ca42904fbf64e14e9b1, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686332306764087222, guid: c05e3edd5e250ca42904fbf64e14e9b1, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 6402042551609614064, guid: c05e3edd5e250ca42904fbf64e14e9b1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 27.27
@@ -2988,7 +2996,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2686332306764087222, guid: c05e3edd5e250ca42904fbf64e14e9b1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1626287593}
   m_SourcePrefab: {fileID: 100100000, guid: c05e3edd5e250ca42904fbf64e14e9b1, type: 3}
 --- !u!1 &71953529
 GameObject:
@@ -3004,7 +3015,7 @@ GameObject:
   - component: {fileID: 71953533}
   m_Layer: 0
   m_Name: Closed Sprite Shape (7)
-  m_TagString: Untagged
+  m_TagString: IntestineWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11422,7 +11433,7 @@ GameObject:
   - component: {fileID: 210754763}
   m_Layer: 0
   m_Name: Closed Sprite Shape (2)
-  m_TagString: Untagged
+  m_TagString: IntestineWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15830,7 +15841,7 @@ GameObject:
   - component: {fileID: 1241596190}
   m_Layer: 0
   m_Name: Closed Sprite Shape (4)
-  m_TagString: Untagged
+  m_TagString: IntestineWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19128,6 +19139,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 125.183}
+--- !u!1 &1504860492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2686332306764087222, guid: c05e3edd5e250ca42904fbf64e14e9b1, type: 3}
+  m_PrefabInstance: {fileID: 58609649}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1505405910
 GameObject:
   m_ObjectHideFlags: 0
@@ -19660,6 +19676,42 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1082618102805517939, guid: c05e3edd5e250ca42904fbf64e14e9b1, type: 3}
   m_PrefabInstance: {fileID: 58609649}
   m_PrefabAsset: {fileID: 0}
+--- !u!58 &1626287593
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504860492}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.92
 --- !u!1 &1633789659
 GameObject:
   m_ObjectHideFlags: 0
@@ -20224,7 +20276,7 @@ GameObject:
   - component: {fileID: 1708744199}
   m_Layer: 0
   m_Name: Closed Sprite Shape (6)
-  m_TagString: Untagged
+  m_TagString: IntestineWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23511,7 +23563,7 @@ GameObject:
   - component: {fileID: 1801624440}
   m_Layer: 0
   m_Name: Closed Sprite Shape (5)
-  m_TagString: Untagged
+  m_TagString: IntestineWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25949,7 +26001,7 @@ GameObject:
   - component: {fileID: 1941568821}
   m_Layer: 0
   m_Name: Closed Sprite Shape (1)
-  m_TagString: Untagged
+  m_TagString: IntestineWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27281,7 +27333,7 @@ GameObject:
   - component: {fileID: 2016285769}
   m_Layer: 0
   m_Name: Closed Sprite Shape (8)
-  m_TagString: Untagged
+  m_TagString: IntestineWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33476,9 +33528,13 @@ GameObject:
   - component: {fileID: 2116274307}
   - component: {fileID: 2116274306}
   - component: {fileID: 2116274305}
+  - component: {fileID: 2116274309}
+  - component: {fileID: 2116274308}
+  - component: {fileID: 2116274310}
+  - component: {fileID: 2116274311}
   m_Layer: 0
   m_Name: ENEMY_RED
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33551,7 +33607,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -8259047884328264025, guid: 4d53585e4cef45646a6cf57f68e9c153, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 6.3303256, y: 6.1}
@@ -33575,6 +33631,96 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &2116274308
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116274304}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1.5825814
+--- !u!50 &2116274309
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116274304}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &2116274310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116274304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdd6b052c2ddc4b0b99840f2bbc97357, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minScaleFactor: 0.3
+  maxScaleFactor: 0.6
+--- !u!114 &2116274311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116274304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccaebbf94fed34b4b853808e9c765adb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7
 --- !u!1 &2117147909
 GameObject:
   m_ObjectHideFlags: 0
