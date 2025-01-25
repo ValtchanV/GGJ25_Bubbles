@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Inflammation pop_0: 5157970346357640811
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
