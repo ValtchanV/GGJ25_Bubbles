@@ -1,0 +1,377 @@
+fileFormatVersion: 2
+guid: 05c58d6f971b15b4296fd1ee9c37e605
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 767221052060115725
+    second: PIZZA_SPRITE_SHEET_0
+  - first:
+      213: 7193827935936676988
+    second: PIZZA_SPRITE_SHEET_1
+  - first:
+      213: -614384771808482568
+    second: PIZZA_SPRITE_SHEET_2
+  - first:
+      213: 4057717472705186163
+    second: PIZZA_SPRITE_SHEET_3
+  - first:
+      213: 8503146685039072092
+    second: PIZZA_SPRITE_SHEET_4
+  - first:
+      213: -6332197125178532454
+    second: PIZZA_SPRITE_SHEET_5
+  - first:
+      213: 586108227940930078
+    second: PIZZA_SPRITE_SHEET_6
+  - first:
+      213: 3172061730570093480
+    second: PIZZA_SPRITE_SHEET_7
+  - first:
+      213: -3075750086778786663
+    second: PIZZA_SPRITE_SHEET_8
+  - first:
+      213: -898462500545579712
+    second: PIZZA_SPRITE_SHEET_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PIZZA_SPRITE_SHEET_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 42
+        width: 624
+        height: 594
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d03ae306b77b5aa00800000000000000
+      internalID: 767221052060115725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIZZA_SPRITE_SHEET_1
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 37
+        width: 628
+        height: 601
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7489c8a46c95d360800000000000000
+      internalID: 7193827935936676988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIZZA_SPRITE_SHEET_2
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 24
+        width: 638
+        height: 619
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fa22f02e444977f0800000000000000
+      internalID: -614384771808482568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIZZA_SPRITE_SHEET_3
+      rect:
+        serializedVersion: 2
+        x: 2489
+        y: 8
+        width: 647
+        height: 639
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3790d7fea88ef4830800000000000000
+      internalID: 4057717472705186163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIZZA_SPRITE_SHEET_4
+      rect:
+        serializedVersion: 2
+        x: 3302
+        y: 0
+        width: 651
+        height: 649
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c535bc2cbde310670800000000000000
+      internalID: 8503146685039072092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIZZA_SPRITE_SHEET_5
+      rect:
+        serializedVersion: 2
+        x: 4185
+        y: 4
+        width: 648
+        height: 660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9ddbf993448f18a0800000000000000
+      internalID: -6332197125178532454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIZZA_SPRITE_SHEET_6
+      rect:
+        serializedVersion: 2
+        x: 5088
+        y: 12
+        width: 644
+        height: 634
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e125a56f356422800800000000000000
+      internalID: 586108227940930078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIZZA_SPRITE_SHEET_7
+      rect:
+        serializedVersion: 2
+        x: 6011
+        y: 22
+        width: 638
+        height: 621
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a3cd30765d650c20800000000000000
+      internalID: 3172061730570093480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIZZA_SPRITE_SHEET_8
+      rect:
+        serializedVersion: 2
+        x: 6928
+        y: 32
+        width: 630
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99c6ca3979db055d0800000000000000
+      internalID: -3075750086778786663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIZZA_SPRITE_SHEET_9
+      rect:
+        serializedVersion: 2
+        x: 7813
+        y: 39
+        width: 625
+        height: 597
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 045b8f2bd150883f0800000000000000
+      internalID: -898462500545579712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PIZZA_SPRITE_SHEET_0: 767221052060115725
+      PIZZA_SPRITE_SHEET_1: 7193827935936676988
+      PIZZA_SPRITE_SHEET_2: -614384771808482568
+      PIZZA_SPRITE_SHEET_3: 4057717472705186163
+      PIZZA_SPRITE_SHEET_4: 8503146685039072092
+      PIZZA_SPRITE_SHEET_5: -6332197125178532454
+      PIZZA_SPRITE_SHEET_6: 586108227940930078
+      PIZZA_SPRITE_SHEET_7: 3172061730570093480
+      PIZZA_SPRITE_SHEET_8: -3075750086778786663
+      PIZZA_SPRITE_SHEET_9: -898462500545579712
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

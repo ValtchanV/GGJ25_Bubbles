@@ -1,0 +1,1043 @@
+fileFormatVersion: 2
+guid: 2d82f9ae4203e014ebfcb93652a3cd34
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4990060631621924061
+    second: LIGHT_SPRITE_SHEET_0
+  - first:
+      213: -2604353650194547378
+    second: LIGHT_SPRITE_SHEET_1
+  - first:
+      213: 6940079075274625474
+    second: LIGHT_SPRITE_SHEET_2
+  - first:
+      213: -7439809743292127825
+    second: LIGHT_SPRITE_SHEET_3
+  - first:
+      213: -493270734106575997
+    second: LIGHT_SPRITE_SHEET_4
+  - first:
+      213: 2715110879048289675
+    second: LIGHT_SPRITE_SHEET_5
+  - first:
+      213: 9056492487362187294
+    second: LIGHT_SPRITE_SHEET_6
+  - first:
+      213: -8449997396339825604
+    second: LIGHT_SPRITE_SHEET_7
+  - first:
+      213: 7431978058918997453
+    second: LIGHT_SPRITE_SHEET_8
+  - first:
+      213: 7792444932340696610
+    second: LIGHT_SPRITE_SHEET_9
+  - first:
+      213: 6148027089672542190
+    second: LIGHT_SPRITE_SHEET_10
+  - first:
+      213: -3830586412669680026
+    second: LIGHT_SPRITE_SHEET_11
+  - first:
+      213: 5907157722224879313
+    second: LIGHT_SPRITE_SHEET_12
+  - first:
+      213: -6714969533857291495
+    second: LIGHT_SPRITE_SHEET_13
+  - first:
+      213: -7770927305429198912
+    second: LIGHT_SPRITE_SHEET_14
+  - first:
+      213: 6876592836464689972
+    second: LIGHT_SPRITE_SHEET_15
+  - first:
+      213: 8319752787118085119
+    second: LIGHT_SPRITE_SHEET_16
+  - first:
+      213: -1562955853499519868
+    second: LIGHT_SPRITE_SHEET_17
+  - first:
+      213: 5801325982374358019
+    second: LIGHT_SPRITE_SHEET_18
+  - first:
+      213: -8520726068280854560
+    second: LIGHT_SPRITE_SHEET_19
+  - first:
+      213: 168314302734583593
+    second: LIGHT_SPRITE_SHEET_20
+  - first:
+      213: -5487436930293891140
+    second: LIGHT_SPRITE_SHEET_21
+  - first:
+      213: -1290642673827006930
+    second: LIGHT_SPRITE_SHEET_22
+  - first:
+      213: -8573005188653933105
+    second: LIGHT_SPRITE_SHEET_23
+  - first:
+      213: 8472293871126680132
+    second: LIGHT_SPRITE_SHEET_24
+  - first:
+      213: -5608354166146116239
+    second: LIGHT_SPRITE_SHEET_25
+  - first:
+      213: 8994367884054637764
+    second: LIGHT_SPRITE_SHEET_26
+  - first:
+      213: -2761137340872831171
+    second: LIGHT_SPRITE_SHEET_27
+  - first:
+      213: -9123649823009235866
+    second: LIGHT_SPRITE_SHEET_28
+  - first:
+      213: -1549182048052050571
+    second: LIGHT_SPRITE_SHEET_29
+  - first:
+      213: 2861241831534753157
+    second: LIGHT_SPRITE_SHEET_30
+  - first:
+      213: 2179233471037508941
+    second: LIGHT_SPRITE_SHEET_31
+  - first:
+      213: 1529902800592222661
+    second: LIGHT_SPRITE_SHEET_32
+  - first:
+      213: -2398273093911566922
+    second: LIGHT_SPRITE_SHEET_33
+  - first:
+      213: -7768792577850283991
+    second: LIGHT_SPRITE_SHEET_34
+  - first:
+      213: -342943675741204542
+    second: LIGHT_SPRITE_SHEET_35
+  - first:
+      213: -8012272159331406888
+    second: LIGHT_SPRITE_SHEET_36
+  - first:
+      213: -5425984372748645857
+    second: LIGHT_SPRITE_SHEET_37
+  - first:
+      213: 3941171381265651080
+    second: LIGHT_SPRITE_SHEET_38
+  - first:
+      213: 3370444702226782937
+    second: LIGHT_SPRITE_SHEET_39
+  - first:
+      213: 8626449730385896302
+    second: LIGHT_SPRITE_SHEET_40
+  - first:
+      213: -9143250845622267320
+    second: LIGHT_SPRITE_SHEET_41
+  - first:
+      213: -8408714747546481777
+    second: LIGHT_SPRITE_SHEET_42
+  - first:
+      213: 2479758312362867924
+    second: LIGHT_SPRITE_SHEET_43
+  - first:
+      213: -3531923951481737039
+    second: LIGHT_SPRITE_SHEET_44
+  - first:
+      213: -1502562047798489252
+    second: LIGHT_SPRITE_SHEET_45
+  - first:
+      213: -5663569376327155375
+    second: LIGHT_SPRITE_SHEET_46
+  - first:
+      213: 2402971711280840345
+    second: LIGHT_SPRITE_SHEET_47
+  - first:
+      213: -3664389561726714046
+    second: LIGHT_SPRITE_SHEET_48
+  - first:
+      213: 1317706265078894535
+    second: LIGHT_SPRITE_SHEET_49
+  - first:
+      213: 8017137787357311011
+    second: LIGHT_SPRITE_SHEET_50
+  - first:
+      213: -779102950926125142
+    second: LIGHT_SPRITE_SHEET_51
+  - first:
+      213: 3538353105465859282
+    second: LIGHT_SPRITE_SHEET_52
+  - first:
+      213: -4869264683357717146
+    second: LIGHT_SPRITE_SHEET_53
+  - first:
+      213: -4351718191826671710
+    second: LIGHT_SPRITE_SHEET_54
+  - first:
+      213: -3808498003855185666
+    second: LIGHT_SPRITE_SHEET_55
+  - first:
+      213: -1446647899518670522
+    second: LIGHT_SPRITE_SHEET_56
+  - first:
+      213: -7229677479870011294
+    second: LIGHT_SPRITE_SHEET_57
+  - first:
+      213: -3445336325460836203
+    second: LIGHT_SPRITE_SHEET_58
+  - first:
+      213: -3222389123558442903
+    second: LIGHT_SPRITE_SHEET_59
+  - first:
+      213: -4342639142478452860
+    second: LIGHT_SPRITE_SHEET_60
+  - first:
+      213: 8097838799249757748
+    second: LIGHT_SPRITE_SHEET_61
+  - first:
+      213: -2606811439918820767
+    second: LIGHT_SPRITE_SHEET_62
+  - first:
+      213: -5907749867347802373
+    second: LIGHT_SPRITE_SHEET_63
+  - first:
+      213: 4444636705562113883
+    second: LIGHT_SPRITE_SHEET_64
+  - first:
+      213: 6863092582272806774
+    second: LIGHT_SPRITE_SHEET_65
+  - first:
+      213: -6329440698581222658
+    second: LIGHT_SPRITE_SHEET_66
+  - first:
+      213: -2010436795610712746
+    second: LIGHT_SPRITE_SHEET_67
+  - first:
+      213: -7588212021374001144
+    second: LIGHT_SPRITE_SHEET_68
+  - first:
+      213: -4611976086310142235
+    second: LIGHT_SPRITE_SHEET_69
+  - first:
+      213: -5635936517377512335
+    second: LIGHT_SPRITE_SHEET_70
+  - first:
+      213: -189228258958556907
+    second: LIGHT_SPRITE_SHEET_71
+  - first:
+      213: 6074032780068916936
+    second: LIGHT_SPRITE_SHEET_72
+  - first:
+      213: 7381480062749816637
+    second: LIGHT_SPRITE_SHEET_73
+  - first:
+      213: 1676705226941193027
+    second: LIGHT_SPRITE_SHEET_74
+  - first:
+      213: 4073740855609259823
+    second: LIGHT_SPRITE_SHEET_75
+  - first:
+      213: -909257761797182172
+    second: LIGHT_SPRITE_SHEET_76
+  - first:
+      213: 7423869699557746482
+    second: LIGHT_SPRITE_SHEET_77
+  - first:
+      213: -2752889889953771464
+    second: LIGHT_SPRITE_SHEET_78
+  - first:
+      213: -8766693202572087027
+    second: LIGHT_SPRITE_SHEET_79
+  - first:
+      213: -6812012814809025080
+    second: LIGHT_SPRITE_SHEET_80
+  - first:
+      213: 8731334521676859780
+    second: LIGHT_SPRITE_SHEET_81
+  - first:
+      213: 4350664935698531550
+    second: LIGHT_SPRITE_SHEET_82
+  - first:
+      213: -557401099528264879
+    second: LIGHT_SPRITE_SHEET_83
+  - first:
+      213: 3239376284516172254
+    second: LIGHT_SPRITE_SHEET_84
+  - first:
+      213: 7189621180745465755
+    second: LIGHT_SPRITE_SHEET_85
+  - first:
+      213: -7351888390960002973
+    second: LIGHT_SPRITE_SHEET_86
+  - first:
+      213: -3274288411851841791
+    second: LIGHT_SPRITE_SHEET_87
+  - first:
+      213: -8996915677858733034
+    second: LIGHT_SPRITE_SHEET_88
+  - first:
+      213: 1214161755232761991
+    second: LIGHT_SPRITE_SHEET_89
+  - first:
+      213: 9132303324894333514
+    second: LIGHT_SPRITE_SHEET_90
+  - first:
+      213: -2789120722378479487
+    second: LIGHT_SPRITE_SHEET_91
+  - first:
+      213: -1296765676472897219
+    second: LIGHT_SPRITE_SHEET_92
+  - first:
+      213: -3985148409955262086
+    second: LIGHT_SPRITE_SHEET_93
+  - first:
+      213: 8992625107232582304
+    second: LIGHT_SPRITE_SHEET_94
+  - first:
+      213: 4266002963073726348
+    second: LIGHT_SPRITE_SHEET_95
+  - first:
+      213: -7913178910524835608
+    second: LIGHT_SPRITE_SHEET_96
+  - first:
+      213: -4989236727265207140
+    second: LIGHT_SPRITE_SHEET_97
+  - first:
+      213: 4629550853896283573
+    second: LIGHT_SPRITE_SHEET_98
+  - first:
+      213: -8900251926452611161
+    second: LIGHT_SPRITE_SHEET_99
+  - first:
+      213: 5572224886361251582
+    second: LIGHT_SPRITE_SHEET_100
+  - first:
+      213: 5874496081900535443
+    second: LIGHT_SPRITE_SHEET_101
+  - first:
+      213: -1493152717348193695
+    second: LIGHT_SPRITE_SHEET_102
+  - first:
+      213: 7509670021225894729
+    second: LIGHT_SPRITE_SHEET_103
+  - first:
+      213: 8322514079866365571
+    second: LIGHT_SPRITE_SHEET_104
+  - first:
+      213: 1324127546786204782
+    second: LIGHT_SPRITE_SHEET_105
+  - first:
+      213: -8221723684559672041
+    second: LIGHT_SPRITE_SHEET_106
+  - first:
+      213: 464070956264849680
+    second: LIGHT_SPRITE_SHEET_107
+  - first:
+      213: -5337241389073786125
+    second: LIGHT_SPRITE_SHEET_108
+  - first:
+      213: 2171123085181333245
+    second: LIGHT_SPRITE_SHEET_109
+  - first:
+      213: -3975154620810452359
+    second: LIGHT_SPRITE_SHEET_110
+  - first:
+      213: -5179590015487579853
+    second: LIGHT_SPRITE_SHEET_111
+  - first:
+      213: 2156229836644271896
+    second: LIGHT_SPRITE_SHEET_112
+  - first:
+      213: 2024865131559769687
+    second: LIGHT_SPRITE_SHEET_113
+  - first:
+      213: -189282478540909925
+    second: LIGHT_SPRITE_SHEET_114
+  - first:
+      213: 1305368614276684196
+    second: LIGHT_SPRITE_SHEET_115
+  - first:
+      213: -5911219426454732324
+    second: LIGHT_SPRITE_SHEET_116
+  - first:
+      213: 4829089095220554573
+    second: LIGHT_SPRITE_SHEET_117
+  - first:
+      213: -7019422200513143294
+    second: LIGHT_SPRITE_SHEET_118
+  - first:
+      213: 1734866986930117489
+    second: LIGHT_SPRITE_SHEET_119
+  - first:
+      213: 5652496620590450626
+    second: LIGHT_SPRITE_SHEET_120
+  - first:
+      213: 8485345020311022859
+    second: LIGHT_SPRITE_SHEET_121
+  - first:
+      213: 8155432327125495911
+    second: LIGHT_SPRITE_SHEET_122
+  - first:
+      213: 3145685255002583645
+    second: LIGHT_SPRITE_SHEET_123
+  - first:
+      213: 1311975603914747791
+    second: LIGHT_SPRITE_SHEET_124
+  - first:
+      213: -8019026193009979604
+    second: LIGHT_SPRITE_SHEET_125
+  - first:
+      213: 6143959143874301623
+    second: LIGHT_SPRITE_SHEET_126
+  - first:
+      213: -95838303651744008
+    second: LIGHT_SPRITE_SHEET_127
+  - first:
+      213: 746186826753571863
+    second: LIGHT_SPRITE_SHEET_128
+  - first:
+      213: 6684078592037842581
+    second: LIGHT_SPRITE_SHEET_129
+  - first:
+      213: -280078750854609936
+    second: LIGHT_SPRITE_SHEET_130
+  - first:
+      213: -3607506304684670106
+    second: LIGHT_SPRITE_SHEET_131
+  - first:
+      213: 1626933737707547736
+    second: LIGHT_SPRITE_SHEET_132
+  - first:
+      213: 2996316504806117839
+    second: LIGHT_SPRITE_SHEET_133
+  - first:
+      213: -5568504411930867205
+    second: LIGHT_SPRITE_SHEET_134
+  - first:
+      213: -1082951774152866625
+    second: LIGHT_SPRITE_SHEET_135
+  - first:
+      213: -326427175578762860
+    second: LIGHT_SPRITE_SHEET_136
+  - first:
+      213: 8497526185362915402
+    second: LIGHT_SPRITE_SHEET_137
+  - first:
+      213: 8814585005172686119
+    second: LIGHT_SPRITE_SHEET_138
+  - first:
+      213: 2637631447170297886
+    second: LIGHT_SPRITE_SHEET_139
+  - first:
+      213: -3296117840876894527
+    second: LIGHT_SPRITE_SHEET_140
+  - first:
+      213: -6083802515617343296
+    second: LIGHT_SPRITE_SHEET_141
+  - first:
+      213: 7237525145335314426
+    second: LIGHT_SPRITE_SHEET_142
+  - first:
+      213: -2061833636514058143
+    second: LIGHT_SPRITE_SHEET_143
+  - first:
+      213: 6346856033747006906
+    second: LIGHT_SPRITE_SHEET_144
+  - first:
+      213: 7742532201025541283
+    second: LIGHT_SPRITE_SHEET_145
+  - first:
+      213: 3762579171774904592
+    second: LIGHT_SPRITE_SHEET_146
+  - first:
+      213: 1471510113049158672
+    second: LIGHT_SPRITE_SHEET_147
+  - first:
+      213: -5865142200183877322
+    second: LIGHT_SPRITE_SHEET_148
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 45
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LIGHT_SPRITE_SHEET_0
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 0
+        width: 1188
+        height: 1618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32b83844b4ebfbab0800000000000000
+      internalID: -4990060631621924061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIGHT_SPRITE_SHEET_3
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 0
+        width: 1181
+        height: 1622
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa5259ec47c70c890800000000000000
+      internalID: -7439809743292127825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIGHT_SPRITE_SHEET_4
+      rect:
+        serializedVersion: 2
+        x: 2987
+        y: 0
+        width: 1227
+        height: 1625
+      alignment: 9
+      pivot: {x: 0.48, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b3b7b71ec8729f0800000000000000
+      internalID: -493270734106575997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIGHT_SPRITE_SHEET_5
+      rect:
+        serializedVersion: 2
+        x: 4506
+        y: 0
+        width: 1191
+        height: 1607
+      alignment: 9
+      pivot: {x: 0.49, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8dc87f85f20ea520800000000000000
+      internalID: 2715110879048289675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIGHT_SPRITE_SHEET_8
+      rect:
+        serializedVersion: 2
+        x: 6173
+        y: 0
+        width: 1171
+        height: 1609
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcd2d541ba0b32760800000000000000
+      internalID: 7431978058918997453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIGHT_SPRITE_SHEET_9
+      rect:
+        serializedVersion: 2
+        x: 7636
+        y: 0
+        width: 1172
+        height: 1611
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 226c5fb3163542c60800000000000000
+      internalID: 7792444932340696610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIGHT_SPRITE_SHEET_11
+      rect:
+        serializedVersion: 2
+        x: 10569
+        y: 0
+        width: 1172
+        height: 1607
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 666c267f3f507dac0800000000000000
+      internalID: -3830586412669680026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIGHT_SPRITE_SHEET_12
+      rect:
+        serializedVersion: 2
+        x: 12033
+        y: 0
+        width: 1173
+        height: 1607
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d66b61a6a07af150800000000000000
+      internalID: 5907157722224879313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIGHT_SPRITE_SHEET_13
+      rect:
+        serializedVersion: 2
+        x: 13383
+        y: 0
+        width: 1178
+        height: 1613
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 913add059c2afc2a0800000000000000
+      internalID: -6714969533857291495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIGHT_SPRITE_SHEET_14
+      rect:
+        serializedVersion: 2
+        x: 14858
+        y: 0
+        width: 1178
+        height: 1607
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c75280b9ce182490800000000000000
+      internalID: -7770927305429198912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIGHT_SPRITE_SHEET_15
+      rect:
+        serializedVersion: 2
+        x: 16328
+        y: 0
+        width: 1179
+        height: 1610
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 433497240c09e6f50800000000000000
+      internalID: 6876592836464689972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIGHT_SPRITE_SHEET_16
+      rect:
+        serializedVersion: 2
+        x: 17799
+        y: 0
+        width: 1211
+        height: 1632
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff35d377413b57370800000000000000
+      internalID: 8319752787118085119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIGHT_SPRITE_SHEET_17
+      rect:
+        serializedVersion: 2
+        x: 19187
+        y: 0
+        width: 1172
+        height: 1607
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48c2b80aee34f4ae0800000000000000
+      internalID: -1562955853499519868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIGHT_SPRITE_SHEET_18
+      rect:
+        serializedVersion: 2
+        x: 20651
+        y: 0
+        width: 1174
+        height: 1609
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30ceaa58e33728050800000000000000
+      internalID: 5801325982374358019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIGHT_SPRITE_SHEET_27
+      rect:
+        serializedVersion: 2
+        x: 9100
+        y: 0
+        width: 1177
+        height: 1575
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3f4535b7387ea9d0800000000000000
+      internalID: -2761137340872831171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2d5c31f7b5a707f42bd260c70e55dfaf
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LIGHT_SPRITE_SHEET_0: -4990060631621924061
+      LIGHT_SPRITE_SHEET_1: -2604353650194547378
+      LIGHT_SPRITE_SHEET_10: 6148027089672542190
+      LIGHT_SPRITE_SHEET_100: 5572224886361251582
+      LIGHT_SPRITE_SHEET_101: 5874496081900535443
+      LIGHT_SPRITE_SHEET_102: -1493152717348193695
+      LIGHT_SPRITE_SHEET_103: 7509670021225894729
+      LIGHT_SPRITE_SHEET_104: 8322514079866365571
+      LIGHT_SPRITE_SHEET_105: 1324127546786204782
+      LIGHT_SPRITE_SHEET_106: -8221723684559672041
+      LIGHT_SPRITE_SHEET_107: 464070956264849680
+      LIGHT_SPRITE_SHEET_108: -5337241389073786125
+      LIGHT_SPRITE_SHEET_109: 2171123085181333245
+      LIGHT_SPRITE_SHEET_11: -3830586412669680026
+      LIGHT_SPRITE_SHEET_110: -3975154620810452359
+      LIGHT_SPRITE_SHEET_111: -5179590015487579853
+      LIGHT_SPRITE_SHEET_112: 2156229836644271896
+      LIGHT_SPRITE_SHEET_113: 2024865131559769687
+      LIGHT_SPRITE_SHEET_114: -189282478540909925
+      LIGHT_SPRITE_SHEET_115: 1305368614276684196
+      LIGHT_SPRITE_SHEET_116: -5911219426454732324
+      LIGHT_SPRITE_SHEET_117: 4829089095220554573
+      LIGHT_SPRITE_SHEET_118: -7019422200513143294
+      LIGHT_SPRITE_SHEET_119: 1734866986930117489
+      LIGHT_SPRITE_SHEET_12: 5907157722224879313
+      LIGHT_SPRITE_SHEET_120: 5652496620590450626
+      LIGHT_SPRITE_SHEET_121: 8485345020311022859
+      LIGHT_SPRITE_SHEET_122: 8155432327125495911
+      LIGHT_SPRITE_SHEET_123: 3145685255002583645
+      LIGHT_SPRITE_SHEET_124: 1311975603914747791
+      LIGHT_SPRITE_SHEET_125: -8019026193009979604
+      LIGHT_SPRITE_SHEET_126: 6143959143874301623
+      LIGHT_SPRITE_SHEET_127: -95838303651744008
+      LIGHT_SPRITE_SHEET_128: 746186826753571863
+      LIGHT_SPRITE_SHEET_129: 6684078592037842581
+      LIGHT_SPRITE_SHEET_13: -6714969533857291495
+      LIGHT_SPRITE_SHEET_130: -280078750854609936
+      LIGHT_SPRITE_SHEET_131: -3607506304684670106
+      LIGHT_SPRITE_SHEET_132: 1626933737707547736
+      LIGHT_SPRITE_SHEET_133: 2996316504806117839
+      LIGHT_SPRITE_SHEET_134: -5568504411930867205
+      LIGHT_SPRITE_SHEET_135: -1082951774152866625
+      LIGHT_SPRITE_SHEET_136: -326427175578762860
+      LIGHT_SPRITE_SHEET_137: 8497526185362915402
+      LIGHT_SPRITE_SHEET_138: 8814585005172686119
+      LIGHT_SPRITE_SHEET_139: 2637631447170297886
+      LIGHT_SPRITE_SHEET_14: -7770927305429198912
+      LIGHT_SPRITE_SHEET_140: -3296117840876894527
+      LIGHT_SPRITE_SHEET_141: -6083802515617343296
+      LIGHT_SPRITE_SHEET_142: 7237525145335314426
+      LIGHT_SPRITE_SHEET_143: -2061833636514058143
+      LIGHT_SPRITE_SHEET_144: 6346856033747006906
+      LIGHT_SPRITE_SHEET_145: 7742532201025541283
+      LIGHT_SPRITE_SHEET_146: 3762579171774904592
+      LIGHT_SPRITE_SHEET_147: 1471510113049158672
+      LIGHT_SPRITE_SHEET_148: -5865142200183877322
+      LIGHT_SPRITE_SHEET_15: 6876592836464689972
+      LIGHT_SPRITE_SHEET_16: 8319752787118085119
+      LIGHT_SPRITE_SHEET_17: -1562955853499519868
+      LIGHT_SPRITE_SHEET_18: 5801325982374358019
+      LIGHT_SPRITE_SHEET_19: -8520726068280854560
+      LIGHT_SPRITE_SHEET_2: 6940079075274625474
+      LIGHT_SPRITE_SHEET_20: 168314302734583593
+      LIGHT_SPRITE_SHEET_21: -5487436930293891140
+      LIGHT_SPRITE_SHEET_22: -1290642673827006930
+      LIGHT_SPRITE_SHEET_23: -8573005188653933105
+      LIGHT_SPRITE_SHEET_24: 8472293871126680132
+      LIGHT_SPRITE_SHEET_25: -5608354166146116239
+      LIGHT_SPRITE_SHEET_26: 8994367884054637764
+      LIGHT_SPRITE_SHEET_27: -2761137340872831171
+      LIGHT_SPRITE_SHEET_28: -9123649823009235866
+      LIGHT_SPRITE_SHEET_29: -1549182048052050571
+      LIGHT_SPRITE_SHEET_3: -7439809743292127825
+      LIGHT_SPRITE_SHEET_30: 2861241831534753157
+      LIGHT_SPRITE_SHEET_31: 2179233471037508941
+      LIGHT_SPRITE_SHEET_32: 1529902800592222661
+      LIGHT_SPRITE_SHEET_33: -2398273093911566922
+      LIGHT_SPRITE_SHEET_34: -7768792577850283991
+      LIGHT_SPRITE_SHEET_35: -342943675741204542
+      LIGHT_SPRITE_SHEET_36: -8012272159331406888
+      LIGHT_SPRITE_SHEET_37: -5425984372748645857
+      LIGHT_SPRITE_SHEET_38: 3941171381265651080
+      LIGHT_SPRITE_SHEET_39: 3370444702226782937
+      LIGHT_SPRITE_SHEET_4: -493270734106575997
+      LIGHT_SPRITE_SHEET_40: 8626449730385896302
+      LIGHT_SPRITE_SHEET_41: -9143250845622267320
+      LIGHT_SPRITE_SHEET_42: -8408714747546481777
+      LIGHT_SPRITE_SHEET_43: 2479758312362867924
+      LIGHT_SPRITE_SHEET_44: -3531923951481737039
+      LIGHT_SPRITE_SHEET_45: -1502562047798489252
+      LIGHT_SPRITE_SHEET_46: -5663569376327155375
+      LIGHT_SPRITE_SHEET_47: 2402971711280840345
+      LIGHT_SPRITE_SHEET_48: -3664389561726714046
+      LIGHT_SPRITE_SHEET_49: 1317706265078894535
+      LIGHT_SPRITE_SHEET_5: 2715110879048289675
+      LIGHT_SPRITE_SHEET_50: 8017137787357311011
+      LIGHT_SPRITE_SHEET_51: -779102950926125142
+      LIGHT_SPRITE_SHEET_52: 3538353105465859282
+      LIGHT_SPRITE_SHEET_53: -4869264683357717146
+      LIGHT_SPRITE_SHEET_54: -4351718191826671710
+      LIGHT_SPRITE_SHEET_55: -3808498003855185666
+      LIGHT_SPRITE_SHEET_56: -1446647899518670522
+      LIGHT_SPRITE_SHEET_57: -7229677479870011294
+      LIGHT_SPRITE_SHEET_58: -3445336325460836203
+      LIGHT_SPRITE_SHEET_59: -3222389123558442903
+      LIGHT_SPRITE_SHEET_6: 9056492487362187294
+      LIGHT_SPRITE_SHEET_60: -4342639142478452860
+      LIGHT_SPRITE_SHEET_61: 8097838799249757748
+      LIGHT_SPRITE_SHEET_62: -2606811439918820767
+      LIGHT_SPRITE_SHEET_63: -5907749867347802373
+      LIGHT_SPRITE_SHEET_64: 4444636705562113883
+      LIGHT_SPRITE_SHEET_65: 6863092582272806774
+      LIGHT_SPRITE_SHEET_66: -6329440698581222658
+      LIGHT_SPRITE_SHEET_67: -2010436795610712746
+      LIGHT_SPRITE_SHEET_68: -7588212021374001144
+      LIGHT_SPRITE_SHEET_69: -4611976086310142235
+      LIGHT_SPRITE_SHEET_7: -8449997396339825604
+      LIGHT_SPRITE_SHEET_70: -5635936517377512335
+      LIGHT_SPRITE_SHEET_71: -189228258958556907
+      LIGHT_SPRITE_SHEET_72: 6074032780068916936
+      LIGHT_SPRITE_SHEET_73: 7381480062749816637
+      LIGHT_SPRITE_SHEET_74: 1676705226941193027
+      LIGHT_SPRITE_SHEET_75: 4073740855609259823
+      LIGHT_SPRITE_SHEET_76: -909257761797182172
+      LIGHT_SPRITE_SHEET_77: 7423869699557746482
+      LIGHT_SPRITE_SHEET_78: -2752889889953771464
+      LIGHT_SPRITE_SHEET_79: -8766693202572087027
+      LIGHT_SPRITE_SHEET_8: 7431978058918997453
+      LIGHT_SPRITE_SHEET_80: -6812012814809025080
+      LIGHT_SPRITE_SHEET_81: 8731334521676859780
+      LIGHT_SPRITE_SHEET_82: 4350664935698531550
+      LIGHT_SPRITE_SHEET_83: -557401099528264879
+      LIGHT_SPRITE_SHEET_84: 3239376284516172254
+      LIGHT_SPRITE_SHEET_85: 7189621180745465755
+      LIGHT_SPRITE_SHEET_86: -7351888390960002973
+      LIGHT_SPRITE_SHEET_87: -3274288411851841791
+      LIGHT_SPRITE_SHEET_88: -8996915677858733034
+      LIGHT_SPRITE_SHEET_89: 1214161755232761991
+      LIGHT_SPRITE_SHEET_9: 7792444932340696610
+      LIGHT_SPRITE_SHEET_90: 9132303324894333514
+      LIGHT_SPRITE_SHEET_91: -2789120722378479487
+      LIGHT_SPRITE_SHEET_92: -1296765676472897219
+      LIGHT_SPRITE_SHEET_93: -3985148409955262086
+      LIGHT_SPRITE_SHEET_94: 8992625107232582304
+      LIGHT_SPRITE_SHEET_95: 4266002963073726348
+      LIGHT_SPRITE_SHEET_96: -7913178910524835608
+      LIGHT_SPRITE_SHEET_97: -4989236727265207140
+      LIGHT_SPRITE_SHEET_98: 4629550853896283573
+      LIGHT_SPRITE_SHEET_99: -8900251926452611161
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

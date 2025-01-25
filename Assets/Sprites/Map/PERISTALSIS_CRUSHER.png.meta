@@ -1,0 +1,745 @@
+fileFormatVersion: 2
+guid: 9cf7238988d6d7049b49cb2197fd90e4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2372599015351487948
+    second: PERISTALSIS_CRUSHER_0
+  - first:
+      213: -1715966698544101736
+    second: PERISTALSIS_CRUSHER_1
+  - first:
+      213: -157873046074054901
+    second: PERISTALSIS_CRUSHER_2
+  - first:
+      213: -8647787540504952664
+    second: PERISTALSIS_CRUSHER_3
+  - first:
+      213: 4761082213748750362
+    second: PERISTALSIS_CRUSHER_4
+  - first:
+      213: -2764854820823019648
+    second: PERISTALSIS_CRUSHER_5
+  - first:
+      213: 3201615913599343726
+    second: PERISTALSIS_CRUSHER_6
+  - first:
+      213: -7897661664773856448
+    second: PERISTALSIS_CRUSHER_7
+  - first:
+      213: 4225526386405775064
+    second: PERISTALSIS_CRUSHER_8
+  - first:
+      213: -3495676682538760736
+    second: PERISTALSIS_CRUSHER_9
+  - first:
+      213: -8468384126192568305
+    second: PERISTALSIS_CRUSHER_10
+  - first:
+      213: -6638611615459586540
+    second: PERISTALSIS_CRUSHER_11
+  - first:
+      213: 7406725623080591410
+    second: PERISTALSIS_CRUSHER_12
+  - first:
+      213: 7641383901743128767
+    second: PERISTALSIS_CRUSHER_13
+  - first:
+      213: 4150521241625623638
+    second: PERISTALSIS_CRUSHER_14
+  - first:
+      213: 7429171516209237969
+    second: PERISTALSIS_CRUSHER_15
+  - first:
+      213: 1905994976584957311
+    second: PERISTALSIS_CRUSHER_16
+  - first:
+      213: -3665965610348542079
+    second: PERISTALSIS_CRUSHER_17
+  - first:
+      213: 8147112652472241811
+    second: PERISTALSIS_CRUSHER_18
+  - first:
+      213: -4083382354602146669
+    second: PERISTALSIS_CRUSHER_19
+  - first:
+      213: 6841191765119026896
+    second: PERISTALSIS_CRUSHER_20
+  - first:
+      213: -1594415427647667022
+    second: PERISTALSIS_CRUSHER_21
+  - first:
+      213: 4757114351452276483
+    second: PERISTALSIS_CRUSHER_22
+  - first:
+      213: 5852137336283406020
+    second: PERISTALSIS_CRUSHER_23
+  - first:
+      213: 3468520529187060258
+    second: PERISTALSIS_CRUSHER_24
+  - first:
+      213: 4706497202337401328
+    second: PERISTALSIS_CRUSHER_25
+  - first:
+      213: -3396573362613997365
+    second: PERISTALSIS_CRUSHER_26
+  - first:
+      213: -787541161095821353
+    second: PERISTALSIS_CRUSHER_27
+  - first:
+      213: 6620851300332463046
+    second: PERISTALSIS_CRUSHER_28
+  - first:
+      213: -6116441847193669537
+    second: PERISTALSIS_CRUSHER_29
+  - first:
+      213: -7281092691343855040
+    second: PERISTALSIS_CRUSHER_30
+  - first:
+      213: -1877684102570774140
+    second: PERISTALSIS_CRUSHER_31
+  - first:
+      213: 4952862606000407904
+    second: PERISTALSIS_CRUSHER_32
+  - first:
+      213: 6557976797658630649
+    second: PERISTALSIS_CRUSHER_33
+  - first:
+      213: 5098968809437743960
+    second: PERISTALSIS_CRUSHER_34
+  - first:
+      213: 2617449310488026959
+    second: PERISTALSIS_CRUSHER_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 120
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_3
+      rect:
+        serializedVersion: 2
+        x: 3323
+        y: 122
+        width: 964
+        height: 1923
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a04723cc03ecf780800000000000000
+      internalID: -8647787540504952664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_4
+      rect:
+        serializedVersion: 2
+        x: 4448
+        y: 122
+        width: 974
+        height: 1923
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a18bce05c03c21240800000000000000
+      internalID: 4761082213748750362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_5
+      rect:
+        serializedVersion: 2
+        x: 5738
+        y: 122
+        width: 992
+        height: 1923
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08f4155703341a9d0800000000000000
+      internalID: -2764854820823019648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_6
+      rect:
+        serializedVersion: 2
+        x: 6855
+        y: 122
+        width: 964
+        height: 1923
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6c9355e5bc6e6c20800000000000000
+      internalID: 3201615913599343726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_7
+      rect:
+        serializedVersion: 2
+        x: 7980
+        y: 122
+        width: 964
+        height: 1923
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0432fea3f8ed56290800000000000000
+      internalID: -7897661664773856448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_8
+      rect:
+        serializedVersion: 2
+        x: 8984
+        y: 122
+        width: 964
+        height: 1923
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d691c25cd514aa30800000000000000
+      internalID: 4225526386405775064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_20
+      rect:
+        serializedVersion: 2
+        x: 6836
+        y: 1262
+        width: 48
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d64f380aabc0fe50800000000000000
+      internalID: 6841191765119026896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_21
+      rect:
+        serializedVersion: 2
+        x: 2273
+        y: 132
+        width: 947
+        height: 1941
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b488aabd9f7fd9e0800000000000000
+      internalID: -1594415427647667022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_22
+      rect:
+        serializedVersion: 2
+        x: 6821
+        y: 857
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 307c9326c4aa40240800000000000000
+      internalID: 4757114351452276483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_23
+      rect:
+        serializedVersion: 2
+        x: 9951
+        y: 123
+        width: 937
+        height: 1958
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ce19f1c6e7f63150800000000000000
+      internalID: 5852137336283406020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_24
+      rect:
+        serializedVersion: 2
+        x: 10913
+        y: 126
+        width: 965
+        height: 1939
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22a38565b09a22030800000000000000
+      internalID: 3468520529187060258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_25
+      rect:
+        serializedVersion: 2
+        x: 11875
+        y: 128
+        width: 977
+        height: 1953
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f9c0b9f446d05140800000000000000
+      internalID: 4706497202337401328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_26
+      rect:
+        serializedVersion: 2
+        x: 12837
+        y: 132
+        width: 981
+        height: 1949
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc0b6d3c582fcd0d0800000000000000
+      internalID: -3396573362613997365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_27
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 149
+        width: 920
+        height: 1901
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d782ee8c771215f0800000000000000
+      internalID: -787541161095821353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_28
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 143
+        width: 934
+        height: 1922
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c3effacd2df1eb50800000000000000
+      internalID: 6620851300332463046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_29
+      rect:
+        serializedVersion: 2
+        x: 13799
+        y: 135
+        width: 947
+        height: 1946
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f50ffa8db880e1ba0800000000000000
+      internalID: -6116441847193669537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_30
+      rect:
+        serializedVersion: 2
+        x: 14761
+        y: 137
+        width: 897
+        height: 1952
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 042b1cb26cc54fa90800000000000000
+      internalID: -7281092691343855040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_31
+      rect:
+        serializedVersion: 2
+        x: 15718
+        y: 141
+        width: 926
+        height: 1948
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 481fed1d14021f5e0800000000000000
+      internalID: -1877684102570774140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_32
+      rect:
+        serializedVersion: 2
+        x: 16679
+        y: 143
+        width: 939
+        height: 1930
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06548fb7c4a1cb440800000000000000
+      internalID: 4952862606000407904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_33
+      rect:
+        serializedVersion: 2
+        x: 17621
+        y: 145
+        width: 955
+        height: 1928
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f942bdd62d920b50800000000000000
+      internalID: 6557976797658630649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_34
+      rect:
+        serializedVersion: 2
+        x: 18578
+        y: 147
+        width: 934
+        height: 1926
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85b455fdd1d23c640800000000000000
+      internalID: 5098968809437743960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PERISTALSIS_CRUSHER_35
+      rect:
+        serializedVersion: 2
+        x: 19535
+        y: 149
+        width: 880
+        height: 1948
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4fda31b74c035420800000000000000
+      internalID: 2617449310488026959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6a077c1a1471f6649a033eaebbcf63d6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PERISTALSIS_CRUSHER_0: -2372599015351487948
+      PERISTALSIS_CRUSHER_1: -1715966698544101736
+      PERISTALSIS_CRUSHER_10: -8468384126192568305
+      PERISTALSIS_CRUSHER_11: -6638611615459586540
+      PERISTALSIS_CRUSHER_12: 7406725623080591410
+      PERISTALSIS_CRUSHER_13: 7641383901743128767
+      PERISTALSIS_CRUSHER_14: 4150521241625623638
+      PERISTALSIS_CRUSHER_15: 7429171516209237969
+      PERISTALSIS_CRUSHER_16: 1905994976584957311
+      PERISTALSIS_CRUSHER_17: -3665965610348542079
+      PERISTALSIS_CRUSHER_18: 8147112652472241811
+      PERISTALSIS_CRUSHER_19: -4083382354602146669
+      PERISTALSIS_CRUSHER_2: -157873046074054901
+      PERISTALSIS_CRUSHER_20: 6841191765119026896
+      PERISTALSIS_CRUSHER_21: -1594415427647667022
+      PERISTALSIS_CRUSHER_22: 4757114351452276483
+      PERISTALSIS_CRUSHER_23: 5852137336283406020
+      PERISTALSIS_CRUSHER_24: 3468520529187060258
+      PERISTALSIS_CRUSHER_25: 4706497202337401328
+      PERISTALSIS_CRUSHER_26: -3396573362613997365
+      PERISTALSIS_CRUSHER_27: -787541161095821353
+      PERISTALSIS_CRUSHER_28: 6620851300332463046
+      PERISTALSIS_CRUSHER_29: -6116441847193669537
+      PERISTALSIS_CRUSHER_3: -8647787540504952664
+      PERISTALSIS_CRUSHER_30: -7281092691343855040
+      PERISTALSIS_CRUSHER_31: -1877684102570774140
+      PERISTALSIS_CRUSHER_32: 4952862606000407904
+      PERISTALSIS_CRUSHER_33: 6557976797658630649
+      PERISTALSIS_CRUSHER_34: 5098968809437743960
+      PERISTALSIS_CRUSHER_35: 2617449310488026959
+      PERISTALSIS_CRUSHER_4: 4761082213748750362
+      PERISTALSIS_CRUSHER_5: -2764854820823019648
+      PERISTALSIS_CRUSHER_6: 3201615913599343726
+      PERISTALSIS_CRUSHER_7: -7897661664773856448
+      PERISTALSIS_CRUSHER_8: 4225526386405775064
+      PERISTALSIS_CRUSHER_9: -3495676682538760736
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
