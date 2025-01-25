@@ -25,21 +25,17 @@ public class EnemyAttack : MonoBehaviour
 
     void Update()
     {
+        if (player.position.x < transform.position.x)
+            spriteRenderer.flipX = false;
+        else
+            spriteRenderer.flipX = true;
+
         if (player == null || !hasTouchedIntestineWalls) return;
 
         Vector3 direction = (player.position - transform.position).normalized;
         rigidbody2D.MovePosition(transform.position + direction * speed * Time.deltaTime);
 
-        speed += Time.deltaTime * 0.1f;
-
-        if (player.position.x < transform.position.x)
-        {
-            spriteRenderer.flipX = false;
-        }
-        else
-        {
-            spriteRenderer.flipX = true;
-        }
+        speed += Time.deltaTime * 0.2f;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -59,7 +55,7 @@ public class EnemyAttack : MonoBehaviour
             //     playerHealth.TakeDamage(10);
             // }
 
-            // Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 }
