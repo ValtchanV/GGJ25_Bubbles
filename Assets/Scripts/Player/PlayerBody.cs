@@ -4,6 +4,22 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
+/*
+    speed limits
+    When big: 
+        Not sticky
+        bouncy
+        less rigid
+        more linear dampening
+    
+    when small
+
+    
+
+
+*/
+
+
 public class PlayerBody : MonoBehaviour
 {
     [SerializeField] bool ShowBones = false;
@@ -62,8 +78,11 @@ public class PlayerBody : MonoBehaviour
         }
         
         
-        var dampingRatio = 0.25f;
-        var frequency = 3f;
+        var dampingRatio = 0.1f;
+        var frequency = 2.5f;
+
+        // var dampingRatio = 0.25f;
+        // var frequency = 3f;
 
         for (var i = 0; i < _ballBodies.Count; i++)
         {
@@ -235,7 +254,7 @@ public class PlayerBody : MonoBehaviour
         {
             foreach(var ball in _ballBodies)
             {
-                ball.AddForce(Vector2.left * 10);
+                ball.AddForce(Vector2.left * 15);
             }
         }
 
@@ -243,18 +262,18 @@ public class PlayerBody : MonoBehaviour
         {
             foreach(var ball in _ballBodies)
             {
-                ball.AddForce(Vector2.right * 10);
+                ball.AddForce(Vector2.right * 15);
             }
         }
 
         if (Input.GetKey(KeyCode.Q))
         {
-            AddRotationForce(-10f);
+            AddRotationForce(-15f);
         }
 
         if (Input.GetKey(KeyCode.E))
         {
-            AddRotationForce(10f);
+            AddRotationForce(15f);
         }
     }
 
