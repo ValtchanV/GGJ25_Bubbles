@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class PlayerBody : MonoBehaviour
 {
+    [SerializeField] bool ShowBones = false;
     [SerializeField] int ShapePointCount = 12;
     List<Rigidbody2D> _ballBodies = new ();
     List<Transform> _ballTransforms = new ();
@@ -35,9 +36,12 @@ public class PlayerBody : MonoBehaviour
             circle.transform.localScale = new Vector3(0.3f, 0.3f, 1);
             _ballTransforms.Add(circle.transform);
             
-            var renderer = circle.AddComponent<SpriteRenderer>();
-            renderer.sprite = circleSprite;
-            renderer.color = Color.white;
+            if (ShowBones)
+            {
+                var renderer = circle.AddComponent<SpriteRenderer>();
+                renderer.sprite = circleSprite;
+                renderer.color = Color.white;
+            }
 
             var rigidbody = circle.AddComponent<Rigidbody2D>();
             rigidbody.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
@@ -45,6 +49,7 @@ public class PlayerBody : MonoBehaviour
             
             var collider = circle.AddComponent<CircleCollider2D>();
         }
+        
         
         var dampingRatio = 0.25f;
         var frequency = 3f;
@@ -65,6 +70,8 @@ public class PlayerBody : MonoBehaviour
         }
 
         _spriteTransforms = transform.Find("Sprite");
+        _spriteTransforms.Find("Circle").GetComponent<SpriteRenderer>().enabled = ShowBones;
+
         var spriteBody = _spriteTransforms.GetComponent<Rigidbody2D>();
         foreach (var ball in _ballBodies)
         {
@@ -100,9 +107,6 @@ public class PlayerBody : MonoBehaviour
         }
 
         UpdateMesh();
-
-        _ballTransforms.ForEach(i => i.GetComponent<SpriteRenderer>().enabled = false);
-        _spriteTransforms.Find("Circle").GetComponent<SpriteRenderer>().enabled = false;
     }
 
 
