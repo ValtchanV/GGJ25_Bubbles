@@ -126,7 +126,8 @@ public class PlayerBody : MonoBehaviour
         var pointRadious = ShapePointSize / 2.0f;
         var position = _spriteTransforms.position;
         var i = 1;
-        foreach(var ball in _ballTransforms) {            
+        foreach(var ball in _ballTransforms)
+        {
             var v = ball.position - position;
             _meshVertices[i++] = v + (v.normalized * pointRadious);
         }
@@ -136,6 +137,16 @@ public class PlayerBody : MonoBehaviour
         _mesh.triangles = _meshTriangles;
         _mesh.uv = _meshUV;
         _mesh.RecalculateNormals();
+    }
+
+    private void AddRotationForce(float force)
+    {
+        var position = _spriteTransforms.position;        
+        for(var i = 0; i < ShapePointCount; i++)
+        {
+            var v = (_ballTransforms[i].position - position).normalized;
+            _ballBodies[i].AddForce(new Vector2(v.y, -v.x) * force);
+        }
     }
 
     void SetRadious(float newRadious)
@@ -234,6 +245,16 @@ public class PlayerBody : MonoBehaviour
             {
                 ball.AddForce(Vector2.right * 10);
             }
+        }
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            AddRotationForce(-10f);
+        }
+
+        if (Input.GetKey(KeyCode.E))
+        {
+            AddRotationForce(10f);
         }
     }
 
