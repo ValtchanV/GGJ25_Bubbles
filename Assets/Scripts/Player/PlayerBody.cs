@@ -21,11 +21,13 @@ TODO:
 
 public class PlayerBody : MonoBehaviour
 {
-    [SerializeField] bool ShowBones = false;
+    [SerializeField] bool ShowBones;
     [SerializeField] int ShapePointCount = 12;
     [SerializeField] float ShapePointSize = 0.3f;
     [SerializeField] float SmallRadious = 1f;
     [SerializeField] float BigRadious = 2.2f;
+    
+
     List<Rigidbody2D> _ballBodies = new ();
     List<Transform> _ballTransforms = new ();
     List<SpringJoint2D> _ballSprings = new ();
@@ -33,16 +35,10 @@ public class PlayerBody : MonoBehaviour
     Transform _coreTransform;
     List<SpringJoint2D> _coreSprings = new ();
 
-    float _currentRadious = 0.8f;
-    float _currentLinearDamping = 0.3f;
-    bool _freezeRotation = true;
-
     Mesh _mesh;
     private Vector3[] _meshVertices;
     private Vector2[] _meshUV;
     private int[] _meshTriangles;    
-
-
 
     // active soft body params
     PhysicsMaterial2D _ballPhysicsMat = null;
@@ -54,21 +50,28 @@ public class PlayerBody : MonoBehaviour
     CachedParam _sbp_b_ldamp = new CachedParam(0);
     CachedParam _sbp_c_adamp = new CachedParam(0);
     CachedParam _sbp_b_adamp = new CachedParam(0);
-    CachedParam _sbap_c_sdamp = new CachedParam(0.1f);
+    CachedParam _sbp_c_sdamp = new CachedParam(0.1f);
     CachedParam _sbp_b_sdamp = new CachedParam(0.1f);
     CachedParam _sbp_c_frequency = new CachedParam(2.5f);
     CachedParam _sbp_b_frequency = new CachedParam(2.5f);
+    CachedParam _sbp_c_distance = new CachedParam(0.8f);
+    CachedParam _sbp_b_distance = new CachedParam(0.8f);
     CachedParam _sbp_c_gravity = new CachedParam(1);
     CachedParam _sbp_b_gravity = new CachedParam(1);
     CachedParam _sbp_b_freezeRotation = new CachedParam(1);
     CachedParam _sbp_showBones = new CachedParam(true);
 
+    private void OnValidate()
+    {
+        _sbp_showBones.IsTrue = ShowBones;
+    }
+
     float _maxRotationVelocity = 1000;
     float _maxMovementVelocity = 1000;
 
-    void UpdateSoftBody_PhysicsMat()
+    void UpdateSoftBody_PhysicsMat(bool force = false)
     {
-        var didChange = _ballPhysicsMat == null || _sbp_pmatFriction.Apply() || _sbp_pmatBounciness.Apply();
+        var didChange = force || _ballPhysicsMat == null || _sbp_pmatFriction.Apply() || _sbp_pmatBounciness.Apply();
         if (!didChange) return;
         
         _ballPhysicsMat = new PhysicsMaterial2D {
@@ -79,9 +82,9 @@ public class PlayerBody : MonoBehaviour
         foreach (var ball in _ballBodies) ball.sharedMaterial = _ballPhysicsMat;
     }
     
-    void UpdateSoftBody_Mass()
+    void UpdateSoftBody_Mass(bool force = false)
     {
-        var didChange = _sbp_c_massRatio.Apply() || _sbp_totalMass.Apply();
+        var didChange = force || _sbp_c_massRatio.Apply() || _sbp_totalMass.Apply();
         if (!didChange) return;
 
         var centerMass = _sbp_c_massRatio.Value * _sbp_totalMass.Value;
@@ -91,17 +94,17 @@ public class PlayerBody : MonoBehaviour
         foreach (var i in _ballBodies) i.mass = ballMass;
     }
 
-    void UpdateSoftBody_BallConstraints()
+    void UpdateSoftBody_BallConstraints(bool force = false)
     {
-        var didChange = _sbp_b_freezeRotation.Apply();
+        var didChange = force || _sbp_b_freezeRotation.Apply();
         if (!didChange) return;
-        var newValue =  _freezeRotation ? RigidbodyConstraints2D.FreezeRotation : RigidbodyConstraints2D.None;
+        var newValue =  _sbp_b_freezeRotation.IsTrue ? RigidbodyConstraints2D.FreezeRotation : RigidbodyConstraints2D.None;
         foreach (var i in _ballBodies) i.constraints = newValue;
     }
 
-    void UpdateSoftBody_CenterBodyCommon()
+    void UpdateSoftBody_CoreBodyCommon(bool force = false)
     {
-        var didChange = _sbp_c_ldamp.Apply() || _sbp_c_adamp.Apply() || _sbp_c_gravity.Apply();
+        var didChange = force || _sbp_c_ldamp.Apply() || _sbp_c_adamp.Apply() || _sbp_c_gravity.Apply();
         if (!didChange) return;
         
         _coreBody.linearDamping = _sbp_c_ldamp.Value;
@@ -109,9 +112,9 @@ public class PlayerBody : MonoBehaviour
         _coreBody.gravityScale = _sbp_c_gravity.Value;
     }
 
-    void UpdateSoftBody_BallBodyCommon()
+    void UpdateSoftBody_BallBodyCommon(bool force = false)
     {
-        var didChange = _sbp_b_ldamp.Apply() || _sbp_b_adamp.Apply() || _sbp_b_gravity.Apply();
+        var didChange = force || _sbp_b_ldamp.Apply() || _sbp_b_adamp.Apply() || _sbp_b_gravity.Apply();
         if (!didChange) return;
         
         foreach (var body in _ballBodies)
@@ -122,71 +125,153 @@ public class PlayerBody : MonoBehaviour
         }
     }
 
-    void UpdateSoftBody_Springs()
+    void UpdateSoftBody_CoreDistance(bool force = false)
     {
-        var didChange = _sbap_c_sdamp.Apply() || _sbp_b_sdamp.Apply() || _sbp_c_frequency.Apply()|| _sbp_b_frequency.Apply();
+        var didChange = force || _sbp_c_distance.Apply();
+        if (!didChange) return;
+
+        var pointOffset = _sbp_c_distance.Value - ShapePointSize / 2.0f;        
+        foreach (var spring in _coreSprings)
+        {
+            spring.distance = pointOffset;
+        }
+        Debug.Log("Update Core Distance");
+    }
+
+    Vector2[] UpdateSoftBody_ballSpringLength_buffer = null;
+    void UpdateSoftBody_BallDistance(bool force = false)
+    {
+        var didChange = force || _sbp_b_distance.Apply();
         if (!didChange) return;
         
-        foreach (var body in _ballBodies)
-        {
-            body.linearDamping = _sbp_b_ldamp.Value;
-            body.angularDamping = _sbp_b_adamp.Value;
-            body.gravityScale = _sbp_b_gravity.Value;
-        }
-    }
+        if (UpdateSoftBody_ballSpringLength_buffer?.Length != ShapePointCount)
+            UpdateSoftBody_ballSpringLength_buffer = new Vector2[ShapePointCount];        
+        var points = UpdateSoftBody_ballSpringLength_buffer;
 
-    void UpdateSoftBodyParams()
-    {
-        UpdateSoftBody_PhysicsMat();
-        UpdateSoftBody_Mass();
-        UpdateSoftBody_BallConstraints();
-        UpdateSoftBody_CenterBodyCommon();
-        UpdateSoftBody_BallBodyCommon();
-    }
 
-    void Awake()
-    {
-        var circleSprite = Resources.Load<Sprite>("Circle");
-        var position = transform.position;
-        
-        _currentRadious = SmallRadious;
-        var pointOffset = _currentRadious - ShapePointSize / 2.0f;
-
+        var pointOffset = _sbp_b_distance.Value - ShapePointSize / 2.0f;
         for (var i = 0; i < ShapePointCount; i++)
         {
             var a = Math.PI * 2.0 / ShapePointCount * i;
-            
-            var circle = new GameObject("Circle");
+            var x = (float)(Math.Cos(a) * pointOffset);
+            var y = (float)(Math.Sin(a) * pointOffset);
+            points[i] = new Vector2(x, y);
+        }
+        
+        var iSpring = 0;
+        for (var i = 0; i < _ballBodies.Count; i++)
+        {
+            var pointA = points[i];
+            for (var ii = i + 1; ii < _ballBodies.Count; ii++)
+            {
+                var pointB = points[ii];
+                var sprint = _ballSprings[iSpring++];
+                sprint.distance = (float)Math.Sqrt(Math.Pow(pointB.x - pointA.x, 2) + Math.Pow(pointB.y - pointA.y, 2));
+            }
+        }
+    }
+
+    void UpdateSoftBody_BallSpringCommon(bool force = false)
+    {
+        var didChange = force || _sbp_b_sdamp.Apply() || _sbp_b_frequency.Apply();
+        if (!didChange) return;
+        
+        foreach (var spring in _ballSprings)
+        {
+            spring.dampingRatio = _sbp_b_sdamp.Value;
+            spring.frequency = _sbp_b_frequency.Value;
+        }
+    }
+
+    void UpdateSoftBody_CoreSpringCommon(bool force = false)
+    {
+        var didChange = force || _sbp_c_sdamp.Apply() || _sbp_c_frequency.Apply();
+        if (!didChange) return;
+        
+        foreach (var spring in _coreSprings)
+        {
+            spring.dampingRatio = _sbp_c_sdamp.Value;
+            spring.frequency = _sbp_c_frequency.Value;
+        }
+    }
+
+    void UpdateSoftBody_Misc(bool force = false)
+    {
+        var didChange = force || _sbp_showBones.Apply();
+        if (!didChange) return;
+
+        foreach(var ball in _ballTransforms)
+        {
+            ball.GetComponent<SpriteRenderer>().enabled = _sbp_showBones.IsTrue;
+        }
+    }
+
+    void UpdateSoftBodyParams(bool force = false)
+    {
+        UpdateSoftBody_PhysicsMat(force);
+        UpdateSoftBody_Mass(force);
+        UpdateSoftBody_BallConstraints(force);
+        UpdateSoftBody_CoreBodyCommon(force);
+        UpdateSoftBody_BallBodyCommon(force);
+        UpdateSoftBody_CoreDistance(force);
+        UpdateSoftBody_BallDistance(force);
+        UpdateSoftBody_BallSpringCommon(force);
+        UpdateSoftBody_CoreSpringCommon(force);
+        UpdateSoftBody_Misc(force);
+    }
+
+    void CreateBalls()
+    {
+        var circleSprite = Resources.Load<Sprite>("Circle");
+        var position = transform.position;
+    
+        var pointOffset = _sbp_b_distance.Value - ShapePointSize / 2.0f;
+
+        for (var i = 0; i < ShapePointCount; i++)
+        {
+            var a = Math.PI * 2.0 / ShapePointCount * i;            
+            var circle = new GameObject($"PlayerBall{i:D2}");
             var x = (float)(Math.Cos(a) * pointOffset) + position.x;
             var y = (float)(Math.Sin(a) * pointOffset) + position.y;
             circle.transform.position = new Vector3(x, y, position.z);            
             circle.transform.localScale = new Vector3(ShapePointSize, ShapePointSize, 1);
+            
             _ballTransforms.Add(circle.transform);
             
-            if (ShowBones)
-            {
-                var renderer = circle.AddComponent<SpriteRenderer>();
-                renderer.sprite = circleSprite;
-                renderer.color = Color.white;
-            }
+            var renderer = circle.AddComponent<SpriteRenderer>();
+            renderer.sprite = circleSprite;
+            renderer.color = Color.white;
 
             var rigidbody = circle.AddComponent<Rigidbody2D>();
             rigidbody.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-            rigidbody.constraints = _freezeRotation
-                ? RigidbodyConstraints2D.FreezeRotation
-                : RigidbodyConstraints2D.None ;
-            _ballBodies.Add(rigidbody);
+            rigidbody.interpolation = RigidbodyInterpolation2D.Interpolate;
             
-            var collider = circle.AddComponent<CircleCollider2D>();
+            _ballBodies.Add(rigidbody);
+
+            circle.AddComponent<CircleCollider2D>();
         }
-        
-        
-        var dampingRatio = 0.1f;
-        var frequency = 2.5f;
+    }
 
-        // var dampingRatio = 0.25f;
-        // var frequency = 3f;
+    void CreateCore()
+    {
+        _coreTransform = transform.Find("Sprite");
+        _coreBody = _coreTransform.GetComponent<Rigidbody2D>();
+        _coreTransform.Find("Circle").GetComponent<SpriteRenderer>().enabled = ShowBones;
+    }
 
+    void CreateCoreSprings()
+    {
+        foreach (var ball in _ballBodies)
+        {
+            var sprint = ball.AddComponent<SpringJoint2D>();
+            sprint.connectedBody = _coreBody;
+            sprint.autoConfigureDistance = true;
+            _coreSprings.Add(sprint);
+        }
+    }
+
+    void CreateBallSprings()
+    {
         for (var i = 0; i < _ballBodies.Count; i++)
         {
             var ballA = _ballBodies[i];
@@ -195,28 +280,14 @@ public class PlayerBody : MonoBehaviour
                 var ballB = _ballBodies[ii];
                 var spring = ballA.AddComponent<SpringJoint2D>();
                 spring.connectedBody = ballB;
-                spring.autoConfigureDistance = true;
-                spring.dampingRatio = dampingRatio;
-                spring.frequency = frequency;
+                spring.autoConfigureDistance = false;
                 _ballSprings.Add(spring);
             }
         }
+    }
 
-        _coreTransform = transform.Find("Sprite");
-        _coreBody = _coreTransform.GetComponent<Rigidbody2D>();
-        _coreTransform.Find("Circle").GetComponent<SpriteRenderer>().enabled = ShowBones;
-
-        var spriteBody = _coreTransform.GetComponent<Rigidbody2D>();
-        foreach (var ball in _ballBodies)
-        {
-            var sprint = ball.AddComponent<SpringJoint2D>();
-            sprint.connectedBody = spriteBody;
-            sprint.autoConfigureDistance = true;
-            sprint.dampingRatio = dampingRatio;
-            sprint.frequency = frequency;
-            _coreSprings.Add(sprint);
-        }
-
+    void CreateMesh()
+    {
         _mesh = new Mesh();
         _mesh.MarkDynamic();
         _coreTransform.GetComponent<MeshFilter>().mesh = _mesh;
@@ -240,8 +311,20 @@ public class PlayerBody : MonoBehaviour
                 (float)Math.Cos(a) / 2 + 0.5f, 
                 (float)Math.Sin(a) / 2 + 0.5f);
         }
+    }
 
-        UpdateMesh();
+    void Awake()
+    {
+        _sbp_b_distance.Value = SmallRadious;
+        _sbp_c_distance.Value = SmallRadious;
+    
+        CreateCore();
+        CreateBalls();
+        CreateCoreSprings();
+        CreateBallSprings();
+        CreateMesh();
+
+        UpdateSoftBodyParams(true);
     }
 
     private void UpdateMesh()
@@ -272,69 +355,6 @@ public class PlayerBody : MonoBehaviour
         }
     }
 
-    void SetRadious(float newRadious)
-    {
-        if(_currentRadious == newRadious) return;
-        _currentRadious = newRadious;
-
-        var points = new Vector2[ShapePointCount];
-
-        var pointOffset = _currentRadious - ShapePointSize / 2.0f;
-
-        for (var i = 0; i < ShapePointCount; i++)
-        {
-            var a = Math.PI * 2.0 / ShapePointCount * i;
-            var x = (float)(Math.Cos(a) * pointOffset);
-            var y = (float)(Math.Sin(a) * pointOffset);
-            points[i] = new Vector2(x, y);
-        }
-        
-        var iSpring = 0;
-        for (var i = 0; i < _ballBodies.Count; i++)
-        {
-            var pointA = points[i];
-            for (var ii = i + 1; ii < _ballBodies.Count; ii++)
-            {
-                var pointB = points[ii];
-                var sprint = _ballSprings[iSpring++];
-                sprint.autoConfigureDistance = false;
-                sprint.distance = (float)Math.Sqrt(Math.Pow(pointB.x - pointA.x, 2) + Math.Pow(pointB.y - pointA.y, 2));
-            }
-        }
-
-        foreach (var spring in _coreSprings)
-        {
-            spring.autoConfigureDistance = false;
-            spring.distance = pointOffset;
-        }
-    }
-    
-    void SetFreezeRotation(bool newFreezeRotation)
-    {
-        if(_freezeRotation == newFreezeRotation) return;
-        _freezeRotation = newFreezeRotation;
-
-        Debug.Log("_freezeRotation = " + _freezeRotation);
-        foreach (var i in _ballBodies)
-        {
-            i.constraints = _freezeRotation
-                ? RigidbodyConstraints2D.FreezeRotation
-                : RigidbodyConstraints2D.None ;
-        }
-    }
-
-
-    void SetLinearDamping(float newLinearDamping)
-    {
-        if(_currentLinearDamping == newLinearDamping) return;
-        _currentLinearDamping = newLinearDamping;
-
-        foreach(var i in _ballBodies)
-        {
-            i.linearDamping = _currentLinearDamping;
-        }
-    }
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -343,28 +363,35 @@ public class PlayerBody : MonoBehaviour
 
     void FixedUpdate()
     {
+        UpdateSoftBodyParams();
+
         if (Input.GetKey( KeyCode.Space))
         {
-            SetRadious(BigRadious);
-            SetLinearDamping(1f);
+            _sbp_b_ldamp.Value = 1f;
+            _sbp_c_ldamp.Value = 1f;
+            _sbp_b_distance.Value = BigRadious;
+            _sbp_c_distance.Value = BigRadious;
+
             foreach(var ball in _ballBodies)
             {
-                ball.AddForce(Vector2.up * 7f, ForceMode2D.Force);
+                ball.AddForce(Vector2.up * 0.7f, ForceMode2D.Force);
             }
         }
         else
         {
-            SetRadious(SmallRadious);
-            SetLinearDamping(0.01f);
+            _sbp_b_ldamp.Value = 0.01f;
+            _sbp_c_ldamp.Value = 0.01f;
+            _sbp_b_distance.Value = SmallRadious;
+            _sbp_c_distance.Value = SmallRadious;
         }
 
-        SetFreezeRotation(!Input.GetKey(KeyCode.LeftShift));
+        _sbp_b_freezeRotation.IsTrue = !Input.GetKey(KeyCode.LeftShift);
 
         if (Input.GetKey(KeyCode.A))
         {
             foreach(var ball in _ballBodies)
             {
-                ball.AddForce(Vector2.left * 15);
+                ball.AddForce(Vector2.left * 1.5f);
             }
         }
 
@@ -372,18 +399,18 @@ public class PlayerBody : MonoBehaviour
         {
             foreach(var ball in _ballBodies)
             {
-                ball.AddForce(Vector2.right * 15);
+                ball.AddForce(Vector2.right * 1.5f);
             }
         }
 
         if (Input.GetKey(KeyCode.Q))
         {
-            AddRotationForce(-15f);
+            AddRotationForce(-1.5f);
         }
 
         if (Input.GetKey(KeyCode.E))
         {
-            AddRotationForce(15f);
+            AddRotationForce(1.5f);
         }
     }
 
@@ -418,7 +445,7 @@ public class PlayerBody : MonoBehaviour
         public bool Apply()
         {
             if (Value == ActiveValue) return false;
-            Value = ActiveValue;
+            ActiveValue = Value;
             return true;
         }
     }
