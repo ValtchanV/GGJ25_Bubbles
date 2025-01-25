@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     public float speed = 6f;
-    Rigidbody2D rigidbody2D;
+    private Rigidbody2D rigidbody2D;
     private SpriteRenderer spriteRenderer;
     private Transform player;
     private bool hasTouchedIntestineWalls = false;
@@ -25,13 +25,13 @@ public class EnemyAttack : MonoBehaviour
 
     void Update()
     {
-        if (player != null && hasTouchedIntestineWalls)
-        {
-            Vector3 direction = (player.position - transform.position).normalized;
-            rigidbody2D.MovePosition(transform.position + direction * speed * Time.deltaTime);
+        if (player == null || !hasTouchedIntestineWalls) return;
 
-            speed += Time.deltaTime * 0.1f;
-        }
+        Vector3 direction = (player.position - transform.position).normalized;
+        rigidbody2D.MovePosition(transform.position + direction * speed * Time.deltaTime);
+
+        speed += Time.deltaTime * 0.1f;
+
         if (player.position.x < transform.position.x)
         {
             spriteRenderer.flipX = false;
@@ -56,7 +56,7 @@ public class EnemyAttack : MonoBehaviour
             // PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
             // if (playerHealth != null)
             // {
-            //     playerHealth.TakeDamage(10); // Example damage value
+            //     playerHealth.TakeDamage(10);
             // }
 
             // Destroy(gameObject);
