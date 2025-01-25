@@ -1314,8 +1314,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7889732210013608351, guid: c05e3edd5e250ca42904fbf64e14e9b1, type: 3}
+      propertyPath: CoreFrequency
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889732210013608351, guid: c05e3edd5e250ca42904fbf64e14e9b1, type: 3}
+      propertyPath: CoreMassRatio
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889732210013608351, guid: c05e3edd5e250ca42904fbf64e14e9b1, type: 3}
+      propertyPath: RotationForce
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889732210013608351, guid: c05e3edd5e250ca42904fbf64e14e9b1, type: 3}
       propertyPath: ShapePointSize
-      value: 0.3
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889732210013608351, guid: c05e3edd5e250ca42904fbf64e14e9b1, type: 3}
+      propertyPath: AirMovementForce
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889732210013608351, guid: c05e3edd5e250ca42904fbf64e14e9b1, type: 3}
+      propertyPath: CoreDampingRatio
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889732210013608351, guid: c05e3edd5e250ca42904fbf64e14e9b1, type: 3}
+      propertyPath: GroundMovementForce
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -15,6 +16,7 @@ TODO:
         bouncy
         less rigid
         more linear dampening
+        increase Frequency to make the bounce bigger
     
     when small
 */
@@ -25,20 +27,26 @@ public class PlayerBody : MonoBehaviour
     [SerializeField] float ShapePointSize = 0.3f;
     [SerializeField] float SmallRadious = 1f;
     [SerializeField] float BigRadious = 2.2f;
+    [SerializeField] float GroundCheckDistance = 0.1f;
     
-    [SerializeField] float CoreMassRatio = 0.001f;
+    [SerializeField] float RotationForce = 0.8f;
+    [SerializeField] float AirMovementForce = 0.5f;
+    [SerializeField] float GroundMovementForce = 0.8f;
+
+    [SerializeField] float CoreMassRatio = 0.16f;
     [SerializeField] float TotalMass = 1f;
     [SerializeField] float CoreLinearDamping = 0f;
     [SerializeField] float BallLinearDamping = 0f;
     [SerializeField] float CoreAngularDamping = 0f;
     [SerializeField] float BallAngularDamping = 0f;
-    [SerializeField] float CoreDampingRatio = 0.1f;
+    [SerializeField] float CoreDampingRatio = 0.5f;
     [SerializeField] float BallDampingRatio = 0.1f;
-    [SerializeField] float CoreFrequency = 2.5f;
+    [SerializeField] float CoreFrequency = 3.5f;
     [SerializeField] float BallFrequency = 2.5f;
     [SerializeField] float CoreGravity = 1f;
     [SerializeField] float BallGravity = 1f;
     [SerializeField] bool ShowBones = false;
+
 
 
     List<Rigidbody2D> _ballBodies = new ();
@@ -57,15 +65,15 @@ public class PlayerBody : MonoBehaviour
     PhysicsMaterial2D _ballPhysicsMat = null;
     CachedParam _sbp_pmatFriction = new CachedParam(0.4f);
     CachedParam _sbp_pmatBounciness = new CachedParam(0);
-    CachedParam _sbp_c_massRatio = new CachedParam(0.001f);
+    CachedParam _sbp_c_massRatio = new CachedParam(0.16f);
     CachedParam _sbp_totalMass = new CachedParam(1);
     CachedParam _sbp_c_ldamp = new CachedParam(0);
     CachedParam _sbp_b_ldamp = new CachedParam(0);
     CachedParam _sbp_c_adamp = new CachedParam(0);
     CachedParam _sbp_b_adamp = new CachedParam(0);
-    CachedParam _sbp_c_sdamp = new CachedParam(0.1f);
+    CachedParam _sbp_c_sdamp = new CachedParam(0.5f);
     CachedParam _sbp_b_sdamp = new CachedParam(0.1f);
-    CachedParam _sbp_c_frequency = new CachedParam(2.5f);
+    CachedParam _sbp_c_frequency = new CachedParam(3.5f);
     CachedParam _sbp_b_frequency = new CachedParam(2.5f);
     CachedParam _sbp_c_distance = new CachedParam(0.8f);
     CachedParam _sbp_b_distance = new CachedParam(0.8f);
@@ -260,7 +268,7 @@ public class PlayerBody : MonoBehaviour
         for (var i = 0; i < ShapePointCount; i++)
         {
             var a = Math.PI * 2.0 / ShapePointCount * i;            
-            var circle = new GameObject($"PlayerBall{i:D2}");
+            var circle = new GameObject("Player");
             var x = (float)(Math.Cos(a) * pointOffset) + position.x;
             var y = (float)(Math.Sin(a) * pointOffset) + position.y;
             circle.transform.position = new Vector3(x, y, position.z);            
@@ -391,9 +399,22 @@ public class PlayerBody : MonoBehaviour
         
     }
 
+    void AddDirectionalForce(Vector2 forceVector, ForceMode2D forceMode = ForceMode2D.Force)
+    {
+        foreach(var ball in _ballBodies) ball.AddForce(forceVector);
+    }
+
     void FixedUpdate()
     {
         UpdateSoftBodyParams();
+
+        var position = _coreTransform.position;
+        var isGrounded = Physics2D.OverlapCircleAll(position, _sbp_c_distance.Value + GroundCheckDistance)
+            .Any(i => i.name != "Player");
+
+        var movementForce = isGrounded ? GroundMovementForce : AirMovementForce;
+        
+        Debug.Log(isGrounded);
 
         if (Input.GetKey( KeyCode.Space))
         {
@@ -419,28 +440,24 @@ public class PlayerBody : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            foreach(var ball in _ballBodies)
-            {
-                ball.AddForce(Vector2.left * 1.5f);
-            }
+            AddDirectionalForce(Vector2.left * movementForce);
+            if (isGrounded) AddRotationForce(-RotationForce);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            foreach(var ball in _ballBodies)
-            {
-                ball.AddForce(Vector2.right * 1.5f);
-            }
+            AddDirectionalForce(Vector2.right * movementForce);
+            if (isGrounded) AddRotationForce(RotationForce);
         }
 
         if (Input.GetKey(KeyCode.Q))
         {
-            AddRotationForce(-1.5f);
+            AddRotationForce(-RotationForce);
         }
 
         if (Input.GetKey(KeyCode.E))
         {
-            AddRotationForce(1.5f);
+            AddRotationForce(RotationForce);
         }
     }
 
