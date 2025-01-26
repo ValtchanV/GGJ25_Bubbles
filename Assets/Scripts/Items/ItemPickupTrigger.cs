@@ -5,6 +5,6 @@ public class ItemPickupTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         GameManager.GetGameManager().OnItemPickup(ItemName);
-        Destroy(gameObject);
+        Destroy(gameObject.transform.parent.gameObject);
     }
 }
