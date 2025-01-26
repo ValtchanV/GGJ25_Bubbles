@@ -58,6 +58,8 @@ public class PlayerBody : MonoBehaviour
     Rigidbody2D _coreBody;
     Transform _coreTransform;
     List<SpringJoint2D> _coreSprings = new ();
+    CircleCollider2D _coreCollider;
+    CircleCollider2D _playerTriggerCollider;
 
     Mesh _mesh;
     private Vector3[] _meshVertices;
@@ -232,6 +234,8 @@ public class PlayerBody : MonoBehaviour
         {
             ball.GetComponent<SpriteRenderer>().enabled = _sbp_showBones.IsTrue;
         }
+        _coreTransform.Find("X").GetComponent<SpriteRenderer>().enabled = _sbp_showBones.IsTrue;
+
     }
 
     void UpdateSoftBodyParams(bool force = false)
@@ -284,7 +288,8 @@ public class PlayerBody : MonoBehaviour
     {
         _coreTransform = transform.Find("Sprite");
         _coreBody = _coreTransform.GetComponent<Rigidbody2D>();
-        _coreTransform.Find("Circle").GetComponent<SpriteRenderer>().enabled = ShowBones;
+        _coreCollider = _coreTransform.GetComponent<CircleCollider2D>();
+        _playerTriggerCollider = _coreTransform.Find("X").GetComponent<CircleCollider2D>();
     }
 
     void CreateCoreSprings()
@@ -319,6 +324,11 @@ public class PlayerBody : MonoBehaviour
         _mesh = new Mesh();
         _mesh.MarkDynamic();
         _coreTransform.GetComponent<MeshFilter>().mesh = _mesh;
+        
+        var meshRenderer =  _coreTransform.GetComponent<MeshRenderer>();
+        meshRenderer.sortingLayerName = "Default";
+        meshRenderer.sortingOrder = 10;
+        
         _meshVertices = new Vector3[ShapePointCount + 1];
         _meshVertices[0] = Vector3.zero;
         _meshTriangles = new int[(ShapePointCount + 1) * 3];
@@ -360,17 +370,25 @@ public class PlayerBody : MonoBehaviour
         var pointRadious = ShapePointSize / 2.0f;
         var position = _coreTransform.position;
         var i = 1;
+        var minRadious = 1000f;
+
         foreach(var ball in _ballTransforms)
         {
             var v = ball.position - position;
+            minRadious = Math.Min(minRadious, v.magnitude - 0.01f);
             _meshVertices[i++] = v + (v.normalized * pointRadious);
         }
+
+        minRadious = Math.Max(minRadious,ShapePointSize / 2f);
 
         _mesh.Clear();
         _mesh.vertices = _meshVertices;
         _mesh.triangles = _meshTriangles;
         _mesh.uv = _meshUV;
         _mesh.RecalculateNormals();
+
+        _coreCollider.radius = minRadious;
+        _playerTriggerCollider.radius = minRadious;
     }
 
     private void AddRotationForce(float force)
@@ -424,15 +442,6 @@ public class PlayerBody : MonoBehaviour
         
         _sbp_c_gravity.Value = isBig ? BigCoreGravity : SmallCoreGravity;
         _sbp_b_gravity.Value = isBig ? BigBallGravity : SmallBallGravity;
-
-        // if (isBig)
-        // {
-        //     foreach(var ball in _ballBodies)
-        //     {
-        //         ball.AddForce(Vector2.up * 0.7f, ForceMode2D.Force);
-        //     }
-
-        // }
 
         _sbp_b_freezeRotation.IsTrue = !Input.GetKey(KeyCode.LeftShift);
 
