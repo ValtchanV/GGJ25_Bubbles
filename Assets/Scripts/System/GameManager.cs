@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log($"OnItemPickup : {name}");
         if (name == "Corn") PlayerHitPoints++;
+        if (name == "Villi") PlayerHitPoints--;
         if (name == "FartBubble") _playerBody.HasFartUpdraft = true;
         if (name == "Pizza") _playerBody.HasPizzaForce = true;
     }
