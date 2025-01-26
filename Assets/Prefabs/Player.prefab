@@ -298,7 +298,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &758996537171719525
 CircleCollider2D:
@@ -386,11 +386,12 @@ MonoBehaviour:
   BigRadious: 2.4
   SmallRadious: 1
   BigFriction: 0.1
-  SmallFriction: 3
+  SmallFriction: 0.8
   GroundCheckDistance: 0.01
   PhysicsMaterialBounciness: 0
   BigRotationForce: 0.4
   SmallRotationForce: 0.85
+  PizzaForceRotationBoost: 1.5
   BigAirMovementForce: 0.3
   SmallAirMovementForce: 0.6
   BigGroundMovementForce: 0.6
@@ -398,16 +399,16 @@ MonoBehaviour:
   CoreMassRatio: 0.16
   TotalMass: 1
   BigCoreLinearDamping: 1
-  SmallCoreLinearDamping: 0
   BigBallLinearDamping: 1
+  SmallCoreLinearDamping: 0.1
   SmallBallLinearDamping: 0
   BigCoreDampingRatio: 0.3
-  SmallCoreDampingRatio: 0.5
   BigBallDampingRatio: 0.1
+  SmallCoreDampingRatio: 0.5
   SmallBallDampingRatio: 0.1
   BigCoreFrequency: 3.5
-  SmallCoreFrequency: 3.5
   BigBallFrequency: 3
+  SmallCoreFrequency: 2.5
   SmallBallFrequency: 2.5
   BigCoreGravity: 0.15
   SmallCoreGravity: 1
