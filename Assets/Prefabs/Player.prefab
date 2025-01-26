@@ -413,4 +413,5 @@ MonoBehaviour:
   SmallCoreGravity: 1
   BigBallGravity: 0.15
   SmallBallGravity: 1
+  FartUpdraftForce: 1
   ShowBones: 0

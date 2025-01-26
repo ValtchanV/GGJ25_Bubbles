@@ -47,10 +47,12 @@ public class PlayerBody : MonoBehaviour
     [SerializeField] float SmallCoreGravity = 1f;
     [SerializeField] float BigBallGravity = 0.15f;
     [SerializeField] float SmallBallGravity = 1f;
+    [SerializeField] float FartUpdraftForce = 1f;
 
     [SerializeField] bool ShowBones = false;
 
 
+    public bool HasFartUpdraft { get; set; }
 
     List<Rigidbody2D> _ballBodies = new ();
     List<Transform> _ballTransforms = new ();
@@ -418,6 +420,8 @@ public class PlayerBody : MonoBehaviour
 
         var position = _coreTransform.position;
         var isBig = Input.GetKey(KeyCode.Space);
+        if (!isBig) HasFartUpdraft = false;
+
         var isGrounded = Physics2D.OverlapCircleAll(position, _sbp_c_distance.Value + GroundCheckDistance)
             .Any(i => i.name != "_");
 
@@ -456,6 +460,8 @@ public class PlayerBody : MonoBehaviour
             AddDirectionalForce(Vector2.right * movementForce);
             if (isGrounded) AddRotationForce(rotationForce);
         }
+    
+        if (isBig && HasFartUpdraft) AddDirectionalForce(Vector2.up * FartUpdraftForce);
     }
 
     void Update()
