@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 89a86149b79b92441b3e7ebd91f13fcb
+guid: 0b34daadfca33b94aa608c0437952a3f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4787590635076406544
-    second: WATERCOLOUR BACKGROUND darker_0
+      213: 1503656326667338610
+    second: green_hills_grass_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,21 +37,21 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 2
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 9
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WATERCOLOUR BACKGROUND darker_0
+      name: green_hills_grass_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2616
-        height: 3417
+        width: 80
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 01d47bd1150f07240800000000000000
-      internalID: 4787590635076406544
+      spriteID: 273864f567f0ed410800000000000000
+      internalID: 1503656326667338610
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      WATERCOLOUR BACKGROUND darker_0: 4787590635076406544
+      green_hills_grass_0: 1503656326667338610
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
