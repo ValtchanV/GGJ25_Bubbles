@@ -6,11 +6,13 @@ public class EnemyAttack : MonoBehaviour
     private Rigidbody2D rigidbody2D;
     private SpriteRenderer spriteRenderer;
     private Transform player;
+    private GameManager gameManager;
 
     void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        gameManager = GameManager.GetGameManager();
     }
 
     void Start()
@@ -58,6 +60,7 @@ public class EnemyAttack : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Enemy attacked the player!");
+            gameManager.PlayerHitPoints--;
             Destroy(gameObject);
         }
     }

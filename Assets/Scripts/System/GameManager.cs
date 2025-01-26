@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public int PlayerHitPoints
     {
         get => _playerHitPoints;
-        set => _playerHitPoints = Math.Clamp(value, 0, 5);
+        set => _playerHitPoints = Math.Clamp(value, 0, 4);
     }
 
     void Awake()
@@ -36,9 +36,9 @@ public class GameManager : MonoBehaviour
     public static GameObject GetPlayerObject()
         => SceneManager.GetActiveScene().GetRootGameObjects().First(i => i.name == "Player");
 
-    public static GameManager GetGameManager() 
+    public static GameManager GetGameManager()
         => GetSystemObject().GetComponent<GameManager>();
-    
+
     public void OnItemPickup(string name)
     {
         Debug.Log($"OnItemPickup : {name}");
