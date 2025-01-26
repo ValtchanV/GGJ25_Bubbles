@@ -25,6 +25,11 @@ public class GameManager : MonoBehaviour
 
     void LateUpdate()
     {
+        if (PlayerHitPoints == 0)
+        {
+            PlayerHitPoints = 4;
+            _playerBody.SetPosition(new Vector2(0, 0));
+        }
         _healthBar.HasFartUpdraft = _playerBody.HasFartUpdraft;
         _healthBar.HasPizzaForce = _playerBody.HasPizzaForce;
         _healthBar.HitPoints = _playerHitPoints;

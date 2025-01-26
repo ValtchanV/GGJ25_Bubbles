@@ -264,21 +264,13 @@ public class PlayerBody : MonoBehaviour
         UpdateSoftBody_CoreSpringCommon(force);
         UpdateSoftBody_Misc(force);
     }
-
+    
     void CreateBalls()
     {
         var circleSprite = Resources.Load<Sprite>("Circle");
-        var position = transform.position;
-    
-        var pointOffset = _sbp_b_distance.Value - ShapePointSize / 2.0f;
-
         for (var i = 0; i < ShapePointCount; i++)
         {
-            var a = Math.PI * 2.0 / ShapePointCount * i;            
             var circle = new GameObject("_");
-            var x = (float)(Math.Cos(a) * pointOffset) + position.x;
-            var y = (float)(Math.Sin(a) * pointOffset) + position.y;
-            circle.transform.position = new Vector3(x, y, position.z);            
             circle.transform.localScale = new Vector3(ShapePointSize, ShapePointSize, 1);
             
             _ballTransforms.Add(circle.transform);
@@ -296,7 +288,6 @@ public class PlayerBody : MonoBehaviour
             circle.AddComponent<CircleCollider2D>();
         }
     }
-
     void CreateCore()
     {
         _coreTransform = transform.Find("Sprite");
@@ -304,6 +295,28 @@ public class PlayerBody : MonoBehaviour
         _coreCollider = _coreTransform.GetComponent<CircleCollider2D>();
         _playerTriggerCollider = _coreTransform.Find("X").GetComponent<CircleCollider2D>();
     }
+
+    public void SetPosition(Vector2 position)
+    {
+        _coreBody.position = position;
+        _coreBody.linearVelocity = Vector2.zero;
+        _coreBody.angularVelocity = 0f;
+        _coreBody.rotation = 0;
+
+        var pointOffset = _sbp_b_distance.Value - ShapePointSize / 2.0f;
+        for (var i = 0; i < ShapePointCount; i++)
+        {
+            var body = _ballBodies[i];
+            var a = Math.PI * 2.0 / ShapePointCount * i;            
+            var x = (float)(Math.Cos(a) * pointOffset) + position.x;
+            var y = (float)(Math.Sin(a) * pointOffset) + position.y;
+            body.position = new Vector2(x, y);
+            body.rotation = 0;
+            body.linearVelocity = Vector2.zero;
+            body.angularVelocity = 0f;
+        }
+    }
+
 
     void CreateCoreSprings()
     {
@@ -371,9 +384,11 @@ public class PlayerBody : MonoBehaviour
     
         CreateCore();
         CreateBalls();
+        SetPosition(_coreBody.position);
+
         CreateCoreSprings();
         CreateBallSprings();
-        CreateMesh();
+        CreateMesh();        
 
         UpdateSoftBodyParams(true);
     }
@@ -482,6 +497,11 @@ public class PlayerBody : MonoBehaviour
         }
     
         if (isBig && HasFartUpdraft) AddDirectionalForce(Vector2.up * FartUpdraftForce);
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SetPosition(new Vector2(0, 0));
+        }
     }
 
     void Update()
