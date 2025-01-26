@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemName: CheckPoint
-  HideSprite: 0
+  HideSprite: 1
 --- !u!61 &3268463857100511323
 BoxCollider2D:
   m_ObjectHideFlags: 0
