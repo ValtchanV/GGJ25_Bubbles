@@ -8,43 +8,46 @@ using UnityEngine;
 TODO: 
     Move soft body geometry location
     Better geometry using ray casting
-    stick to walls
-
     speed limits
-    When big: 
-        Not sticky
-        bouncy
-        less rigid
-        more linear dampening
-        increase Frequency to make the bounce bigger
-    
-    when small
 */
 
 public class PlayerBody : MonoBehaviour
 {
     [SerializeField] int ShapePointCount = 12;
     [SerializeField] float ShapePointSize = 0.3f;
+    [SerializeField] float BigRadious = 2.4f;
     [SerializeField] float SmallRadious = 1f;
-    [SerializeField] float BigRadious = 2.2f;
-    [SerializeField] float GroundCheckDistance = 0.1f;
-    
-    [SerializeField] float RotationForce = 0.8f;
-    [SerializeField] float AirMovementForce = 0.5f;
-    [SerializeField] float GroundMovementForce = 0.8f;
+    [SerializeField] float BigFriction = 0.1f;
+    [SerializeField] float SmallFriction = 3f;
+    [SerializeField] float GroundCheckDistance = 0.01f;
+    [SerializeField] float PhysicsMaterialBounciness = 0f;
+    [SerializeField] float BigRotationForce = 0.4f;
+    [SerializeField] float SmallRotationForce = 0.85f;
+    [SerializeField] float BigAirMovementForce = 0.3f;
+    [SerializeField] float SmallAirMovementForce = 0.6f;
+    [SerializeField] float BigGroundMovementForce = 0.6f;
+    [SerializeField] float SmallGroundMovementForce = 1.0f;
 
     [SerializeField] float CoreMassRatio = 0.16f;
     [SerializeField] float TotalMass = 1f;
-    [SerializeField] float CoreLinearDamping = 0f;
-    [SerializeField] float BallLinearDamping = 0f;
-    [SerializeField] float CoreAngularDamping = 0f;
-    [SerializeField] float BallAngularDamping = 0f;
-    [SerializeField] float CoreDampingRatio = 0.5f;
-    [SerializeField] float BallDampingRatio = 0.1f;
-    [SerializeField] float CoreFrequency = 3.5f;
-    [SerializeField] float BallFrequency = 2.5f;
-    [SerializeField] float CoreGravity = 1f;
-    [SerializeField] float BallGravity = 1f;
+
+    [SerializeField] float BigCoreLinearDamping = 1.0f;
+    [SerializeField] float SmallCoreLinearDamping = 0f;
+    [SerializeField] float BigBallLinearDamping = 1.0f;
+    [SerializeField] float SmallBallLinearDamping = 0f;
+    [SerializeField] float BigCoreDampingRatio = 0.3f;
+    [SerializeField] float SmallCoreDampingRatio = 0.5f;
+    [SerializeField] float BigBallDampingRatio = 0.1f;
+    [SerializeField] float SmallBallDampingRatio = 0.1f;
+    [SerializeField] float BigCoreFrequency = 2.5f;
+    [SerializeField] float SmallCoreFrequency = 3.5f;    
+    [SerializeField] float BigBallFrequency = 1.5f;
+    [SerializeField] float SmallBallFrequency = 2.5f;
+    [SerializeField] float BigCoreGravity = 0.15f;
+    [SerializeField] float SmallCoreGravity = 1f;
+    [SerializeField] float BigBallGravity = 0.15f;
+    [SerializeField] float SmallBallGravity = 1f;
+
     [SerializeField] bool ShowBones = false;
 
 
@@ -86,22 +89,7 @@ public class PlayerBody : MonoBehaviour
     {
         _sbp_c_massRatio.Value = CoreMassRatio;
         _sbp_totalMass.Value = TotalMass;
-        
-        _sbp_c_ldamp.Value = CoreLinearDamping;
-        _sbp_b_ldamp.Value = BallLinearDamping;
-        
-        _sbp_c_adamp.Value = CoreAngularDamping;
-        _sbp_b_adamp.Value = BallAngularDamping;
-        
-        _sbp_c_sdamp.Value = CoreDampingRatio;
-        _sbp_b_sdamp.Value = BallDampingRatio;
-    
-        _sbp_c_frequency.Value = CoreFrequency;
-        _sbp_b_frequency.Value = BallFrequency;
-        
-        _sbp_c_gravity.Value = CoreGravity;
-        _sbp_b_gravity.Value = BallGravity;
-
+        _sbp_pmatBounciness.Value = PhysicsMaterialBounciness;        
         _sbp_showBones.IsTrue = ShowBones;
     }
 
@@ -112,10 +100,12 @@ public class PlayerBody : MonoBehaviour
     {
         var didChange = force || _ballPhysicsMat == null || _sbp_pmatFriction.Apply() || _sbp_pmatBounciness.Apply();
         if (!didChange) return;
-        
+
         _ballPhysicsMat = new PhysicsMaterial2D {
+            friction = _sbp_pmatFriction.Value,
+            bounciness = _sbp_pmatBounciness.Value,
             bounceCombine = PhysicsMaterialCombine2D.Maximum,
-            frictionCombine = PhysicsMaterialCombine2D.Maximum,
+            frictionCombine = PhysicsMaterialCombine2D.Maximum,            
         };
         
         foreach (var ball in _ballBodies) ball.sharedMaterial = _ballPhysicsMat;
@@ -268,7 +258,7 @@ public class PlayerBody : MonoBehaviour
         for (var i = 0; i < ShapePointCount; i++)
         {
             var a = Math.PI * 2.0 / ShapePointCount * i;            
-            var circle = new GameObject("Player");
+            var circle = new GameObject("_");
             var x = (float)(Math.Cos(a) * pointOffset) + position.x;
             var y = (float)(Math.Sin(a) * pointOffset) + position.y;
             circle.transform.position = new Vector3(x, y, position.z);            
@@ -409,55 +399,53 @@ public class PlayerBody : MonoBehaviour
         UpdateSoftBodyParams();
 
         var position = _coreTransform.position;
+        var isBig = Input.GetKey(KeyCode.Space);
         var isGrounded = Physics2D.OverlapCircleAll(position, _sbp_c_distance.Value + GroundCheckDistance)
-            .Any(i => i.name != "Player");
+            .Any(i => i.name != "_");
 
-        var movementForce = isGrounded ? GroundMovementForce : AirMovementForce;
+        var airMovementForce = isBig ? BigAirMovementForce : SmallAirMovementForce;
+        var groundMovementForce = isBig ? BigGroundMovementForce : SmallGroundMovementForce;
+        var movementForce = isGrounded ? groundMovementForce : airMovementForce;
+        var rotationForce = isBig ? BigRotationForce : SmallRotationForce;
+
+        _sbp_b_distance.Value = isBig ? BigRadious : SmallRadious;
+        _sbp_c_distance.Value = isBig ? BigRadious : SmallRadious;
         
-        Debug.Log(isGrounded);
+        _sbp_pmatFriction.Value = isBig ? BigFriction : SmallFriction;
+        
+        _sbp_c_ldamp.Value = isBig ? BigCoreLinearDamping : SmallCoreLinearDamping;
+        _sbp_b_ldamp.Value = isBig ? BigBallLinearDamping : SmallBallLinearDamping;
+        
+        _sbp_c_sdamp.Value = isBig ? BigCoreDampingRatio : SmallCoreDampingRatio;
+        _sbp_b_sdamp.Value = isBig ? BigBallDampingRatio : SmallBallDampingRatio;
+    
+        _sbp_c_frequency.Value = isBig ? BigCoreFrequency : SmallCoreFrequency;
+        _sbp_b_frequency.Value = isBig ? BigBallFrequency : SmallBallFrequency;
+        
+        _sbp_c_gravity.Value = isBig ? BigCoreGravity : SmallCoreGravity;
+        _sbp_b_gravity.Value = isBig ? BigBallGravity : SmallBallGravity;
 
-        if (Input.GetKey( KeyCode.Space))
-        {
-            // _sbp_b_ldamp.Value = 1f;
-            // _sbp_c_ldamp.Value = 1f;
-            _sbp_b_distance.Value = BigRadious;
-            _sbp_c_distance.Value = BigRadious;
+        // if (isBig)
+        // {
+        //     foreach(var ball in _ballBodies)
+        //     {
+        //         ball.AddForce(Vector2.up * 0.7f, ForceMode2D.Force);
+        //     }
 
-            foreach(var ball in _ballBodies)
-            {
-                ball.AddForce(Vector2.up * 0.7f, ForceMode2D.Force);
-            }
-        }
-        else
-        {
-            // _sbp_b_ldamp.Value = 0.01f;
-            // _sbp_c_ldamp.Value = 0.01f;
-            _sbp_b_distance.Value = SmallRadious;
-            _sbp_c_distance.Value = SmallRadious;
-        }
+        // }
 
         _sbp_b_freezeRotation.IsTrue = !Input.GetKey(KeyCode.LeftShift);
 
         if (Input.GetKey(KeyCode.A))
         {
             AddDirectionalForce(Vector2.left * movementForce);
-            if (isGrounded) AddRotationForce(-RotationForce);
+            if (isGrounded) AddRotationForce(-rotationForce);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             AddDirectionalForce(Vector2.right * movementForce);
-            if (isGrounded) AddRotationForce(RotationForce);
-        }
-
-        if (Input.GetKey(KeyCode.Q))
-        {
-            AddRotationForce(-RotationForce);
-        }
-
-        if (Input.GetKey(KeyCode.E))
-        {
-            AddRotationForce(RotationForce);
+            if (isGrounded) AddRotationForce(rotationForce);
         }
     }
 
