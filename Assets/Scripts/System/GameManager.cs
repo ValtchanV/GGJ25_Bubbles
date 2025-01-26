@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     HealthBar _healthBar;
     PlayerBody _playerBody;
+    Vector2 _checkPointPosition;
 
     [SerializeField] int _playerHitPoints = 4;
     public int PlayerHitPoints
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
     {
         _healthBar = transform.Find("UI/Canvas/HealthBar").GetComponent<HealthBar>();
         _playerBody = GetPlayerObject().transform.Find("Model").GetComponent<PlayerBody>();
+        _checkPointPosition = _playerBody.transform.position;
     }
 
     void LateUpdate()
@@ -28,7 +30,7 @@ public class GameManager : MonoBehaviour
         if (PlayerHitPoints == 0)
         {
             PlayerHitPoints = 4;
-            _playerBody.SetPosition(new Vector2(0, 0));
+            _playerBody.SetPosition(_checkPointPosition);
         }
         _healthBar.HasFartUpdraft = _playerBody.HasFartUpdraft;
         _healthBar.HasPizzaForce = _playerBody.HasPizzaForce;
@@ -44,12 +46,13 @@ public class GameManager : MonoBehaviour
     public static GameManager GetGameManager()
         => GetSystemObject().GetComponent<GameManager>();
 
-    public void OnItemPickup(string name)
+    public void OnItemPickup(string name, Vector2 position)
     {
-        Debug.Log($"OnItemPickup : {name}");
+        Debug.Log($"OnItemPickup : {name} at ({position.x}, {position.y})");
         if (name == "Corn") PlayerHitPoints++;
         if (name == "Villi") PlayerHitPoints--;
         if (name == "FartBubble") _playerBody.HasFartUpdraft = true;
         if (name == "Pizza") _playerBody.HasPizzaForce = true;
+        if (name == "CheckPoint") _checkPointPosition = position;
     }
 }
