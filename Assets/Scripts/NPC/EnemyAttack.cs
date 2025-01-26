@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed = 30f;
     private Rigidbody2D rigidbody2D;
     private SpriteRenderer spriteRenderer;
     private Transform player;
