@@ -10,6 +10,13 @@ public class GameManager : MonoBehaviour
     HealthBar _healthBar;
     PlayerBody _playerBody;
 
+    [SerializeField] int _playerHitPoints = 4;
+    public int PlayerHitPoints
+    {
+        get => _playerHitPoints;
+        set => _playerHitPoints = Math.Clamp(value, 0, 5);
+    }
+
     void Awake()
     {
         _healthBar = transform.Find("UI/Canvas/HealthBar").GetComponent<HealthBar>();
@@ -20,6 +27,7 @@ public class GameManager : MonoBehaviour
     {
         _healthBar.HasFartUpdraft = _playerBody.HasFartUpdraft;
         _healthBar.HasPizzaForce = _playerBody.HasPizzaForce;
+        _healthBar.HitPoints = _playerHitPoints;
     }
 
     public static GameObject GetSystemObject()
@@ -34,7 +42,7 @@ public class GameManager : MonoBehaviour
     public void OnItemPickup(string name)
     {
         Debug.Log($"OnItemPickup : {name}");
-        if (name == "Corn") _healthBar.HitPoints = Math.Min(_healthBar.HitPoints + 1, 4);
+        if (name == "Corn") PlayerHitPoints++;
         if (name == "FartBubble") _playerBody.HasFartUpdraft = true;
         if (name == "Pizza") _playerBody.HasPizzaForce = true;
     }
