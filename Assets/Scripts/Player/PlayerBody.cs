@@ -390,7 +390,7 @@ public class PlayerBody : MonoBehaviour
         _mesh.RecalculateNormals();
 
         _coreCollider.radius = minRadious;
-        _playerTriggerCollider.radius = minRadious;
+        _playerTriggerCollider.radius = minRadious + 0.35f;
     }
 
     private void AddRotationForce(float force)
