@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -47,7 +48,7 @@ public class FartBubbleMover : MonoBehaviour
         {
             var newPosition = transform.position;
             _body.MovePosition(_body.position + (Vector2.up * moveSpeed * Time.fixedDeltaTime));
-            if ((newPosition - _oldPosition).magnitude < popThreshold)
+            if (Math.Abs(newPosition.y - _oldPosition.y) < popThreshold)
             {
                 Destroy(gameObject);
             }
