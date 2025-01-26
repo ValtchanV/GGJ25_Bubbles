@@ -30,5 +30,6 @@ public class GameManager : MonoBehaviour
         Debug.Log($"OnItemPickup : {name}");
         if (name == "Corn") _healthBar.HitPoints = Math.Min(_healthBar.HitPoints + 1, 4);
         if (name == "FartBubble") _playerBody.HasFartUpdraft = true;
+        if (name == "Pizza") _playerBody.HasPizzaForce = true;
     }
 }

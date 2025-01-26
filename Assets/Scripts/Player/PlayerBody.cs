@@ -23,6 +23,7 @@ public class PlayerBody : MonoBehaviour
     [SerializeField] float PhysicsMaterialBounciness = 0f;
     [SerializeField] float BigRotationForce = 0.4f;
     [SerializeField] float SmallRotationForce = 0.85f;
+    [SerializeField] float PizzaForceRotationBoost = 1.5f;
     [SerializeField] float BigAirMovementForce = 0.3f;
     [SerializeField] float SmallAirMovementForce = 0.6f;
     [SerializeField] float BigGroundMovementForce = 0.6f;
@@ -53,6 +54,7 @@ public class PlayerBody : MonoBehaviour
 
 
     public bool HasFartUpdraft { get; set; }
+    public bool HasPizzaForce { get; set; }
 
     List<Rigidbody2D> _ballBodies = new ();
     List<Transform> _ballTransforms = new ();
@@ -418,6 +420,10 @@ public class PlayerBody : MonoBehaviour
     {
         UpdateSoftBodyParams();
 
+        var moveLeft = Input.GetKey(KeyCode.A);
+        var moveRight = Input.GetKey(KeyCode.D);
+        if (!(moveLeft || moveRight)) HasPizzaForce = false;
+
         var position = _coreTransform.position;
         var isBig = Input.GetKey(KeyCode.Space);
         if (!isBig) HasFartUpdraft = false;
@@ -429,6 +435,8 @@ public class PlayerBody : MonoBehaviour
         var groundMovementForce = isBig ? BigGroundMovementForce : SmallGroundMovementForce;
         var movementForce = isGrounded ? groundMovementForce : airMovementForce;
         var rotationForce = isBig ? BigRotationForce : SmallRotationForce;
+
+        if(HasPizzaForce) rotationForce *= PizzaForceRotationBoost;
 
         _sbp_b_distance.Value = isBig ? BigRadious : SmallRadious;
         _sbp_c_distance.Value = isBig ? BigRadious : SmallRadious;
@@ -449,13 +457,13 @@ public class PlayerBody : MonoBehaviour
 
         _sbp_b_freezeRotation.IsTrue = !Input.GetKey(KeyCode.LeftShift);
 
-        if (Input.GetKey(KeyCode.A))
+        if (moveLeft && !moveRight)
         {
             AddDirectionalForce(Vector2.left * movementForce);
             if (isGrounded) AddRotationForce(-rotationForce);
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (!moveLeft && moveRight)
         {
             AddDirectionalForce(Vector2.right * movementForce);
             if (isGrounded) AddRotationForce(rotationForce);
