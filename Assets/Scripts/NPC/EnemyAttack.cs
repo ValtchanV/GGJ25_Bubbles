@@ -34,7 +34,7 @@ public class EnemyAttack : MonoBehaviour
         Vector3 direction = (player.position - transform.position).normalized;
         rigidbody2D.MovePosition(transform.position + direction * speed * Time.deltaTime);
 
-        speed += Time.deltaTime * 0.4f;
+        speed += Time.deltaTime * 0.5f;
     }
 
     private bool IsTouchingIntestineWall()

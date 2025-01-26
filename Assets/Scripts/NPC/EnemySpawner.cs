@@ -3,10 +3,12 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject[] enemyPrefabs;
-    public float spawnInterval = 3f;
-    public float spawnDistance = 5f;
+    public float spawnInterval = 5f;
+    public float spawnDistance = 0f;
+    public int maxEnemies = 10;
 
     private float spawnTimer;
+    private int currentEnemyCount = 0;
 
     void Start()
     {
@@ -15,6 +17,8 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
+        if (currentEnemyCount >= maxEnemies) return;
+
         spawnTimer -= Time.deltaTime;
 
         if (spawnTimer <= 0f)
@@ -38,5 +42,11 @@ public class EnemySpawner : MonoBehaviour
         );
 
         Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        currentEnemyCount++;
+    }
+
+    public void OnEnemyDestroyed()
+    {
+        currentEnemyCount--;
     }
 }
