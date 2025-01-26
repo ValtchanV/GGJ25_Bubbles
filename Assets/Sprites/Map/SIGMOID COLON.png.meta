@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 13d99fa3a68500849b2a48ee79a3634a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4321752857720973988
+    second: SIGMOID COLON_0
+  - first:
+      213: 6649311402445844312
+    second: SIGMOID COLON_1
+  - first:
+      213: 8122462739916323754
+    second: SIGMOID COLON_2
+  - first:
+      213: 7956733571384181945
+    second: SIGMOID COLON_3
+  - first:
+      213: 3081917167905247412
+    second: SIGMOID COLON_4
+  - first:
+      213: -2979396583425918531
+    second: SIGMOID COLON_5
+  - first:
+      213: 8405529662553063958
+    second: SIGMOID COLON_6
+  - first:
+      213: -2981640481232544766
+    second: SIGMOID COLON_7
+  - first:
+      213: 4925289752092046444
+    second: SIGMOID COLON_8
+  - first:
+      213: 4905086533353380197
+    second: SIGMOID COLON_9
+  - first:
+      213: 4631514384044724626
+    second: SIGMOID COLON_10
+  - first:
+      213: -6579862804778081107
+    second: SIGMOID COLON_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SIGMOID COLON_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 421
+        width: 173
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aaec739353f9fb30800000000000000
+      internalID: 4321752857720973988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SIGMOID COLON_1
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 437
+        width: 81
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85f2dbfad79174c50800000000000000
+      internalID: 6649311402445844312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SIGMOID COLON_2
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 453
+        width: 152
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aabfe0ac3d8c8b070800000000000000
+      internalID: 8122462739916323754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SIGMOID COLON_3
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 429
+        width: 230
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b487cec60ffb6e60800000000000000
+      internalID: 7956733571384181945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SIGMOID COLON_4
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 449
+        width: 160
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b09b24e55b25ca20800000000000000
+      internalID: 3081917167905247412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SIGMOID COLON_5
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 437
+        width: 81
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db9b2e7c79e07a6d0800000000000000
+      internalID: -2979396583425918531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SIGMOID COLON_6
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 441
+        width: 144
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6120c7591b076a470800000000000000
+      internalID: 8405529662553063958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SIGMOID COLON_7
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 25
+        width: 183
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20c953c97c51f96d0800000000000000
+      internalID: -2981640481232544766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SIGMOID COLON_8
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 31
+        width: 160
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6471592fe42a5440800000000000000
+      internalID: 4925289752092046444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SIGMOID COLON_9
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 35
+        width: 125
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 569941db63e521440800000000000000
+      internalID: 4905086533353380197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SIGMOID COLON_10
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 31
+        width: 160
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29119112bc1764040800000000000000
+      internalID: 4631514384044724626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SIGMOID COLON_11
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 22
+        width: 217
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da4a56204a1afa4a0800000000000000
+      internalID: -6579862804778081107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SIGMOID COLON_0: 4321752857720973988
+      SIGMOID COLON_1: 6649311402445844312
+      SIGMOID COLON_10: 4631514384044724626
+      SIGMOID COLON_11: -6579862804778081107
+      SIGMOID COLON_2: 8122462739916323754
+      SIGMOID COLON_3: 7956733571384181945
+      SIGMOID COLON_4: 3081917167905247412
+      SIGMOID COLON_5: -2979396583425918531
+      SIGMOID COLON_6: 8405529662553063958
+      SIGMOID COLON_7: -2981640481232544766
+      SIGMOID COLON_8: 4925289752092046444
+      SIGMOID COLON_9: 4905086533353380197
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -42,8 +42,10 @@ GameObject:
   m_Component:
   - component: {fileID: 464584005524024884}
   - component: {fileID: 8049908662433991436}
-  m_Layer: 0
-  m_Name: Circle
+  - component: {fileID: 9082081021556903891}
+  - component: {fileID: 4471226423059055111}
+  m_Layer: 3
+  m_Name: X
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +61,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1082618102805517939}
@@ -119,6 +121,69 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &9082081021556903891
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2353357222339206843}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.49999997
+--- !u!50 &4471226423059055111
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2353357222339206843}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &2686332306764087222
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,6 +196,7 @@ GameObject:
   - component: {fileID: 3374860861009086961}
   - component: {fileID: 4373935962776800446}
   - component: {fileID: 187712632399150406}
+  - component: {fileID: 758996537171719525}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -230,10 +296,46 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &758996537171719525
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2686332306764087222}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
 --- !u!1 &4543672328353154690
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,3 +382,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShapePointCount: 12
+  ShapePointSize: 0.3
+  BigRadious: 2.4
+  SmallRadious: 1
+  BigFriction: 0.1
+  SmallFriction: 3
+  GroundCheckDistance: 0.01
+  PhysicsMaterialBounciness: 0
+  BigRotationForce: 0.4
+  SmallRotationForce: 0.85
+  BigAirMovementForce: 0.3
+  SmallAirMovementForce: 0.6
+  BigGroundMovementForce: 0.6
+  SmallGroundMovementForce: 1
+  CoreMassRatio: 0.16
+  TotalMass: 1
+  BigCoreLinearDamping: 1
+  SmallCoreLinearDamping: 0
+  BigBallLinearDamping: 1
+  SmallBallLinearDamping: 0
+  BigCoreDampingRatio: 0.3
+  SmallCoreDampingRatio: 0.5
+  BigBallDampingRatio: 0.1
+  SmallBallDampingRatio: 0.1
+  BigCoreFrequency: 3.5
+  SmallCoreFrequency: 3.5
+  BigBallFrequency: 3
+  SmallBallFrequency: 2.5
+  BigCoreGravity: 0.15
+  SmallCoreGravity: 1
+  BigBallGravity: 0.15
+  SmallBallGravity: 1
+  FartUpdraftForce: 1
+  ShowBones: 0

@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: 0a20bc741d9d0c446882098eee10ff7c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4207163350891493334
+    second: DESCENDING COLON_0
+  - first:
+      213: 8139891695527624081
+    second: DESCENDING COLON_1
+  - first:
+      213: 4465446028951717461
+    second: DESCENDING COLON_2
+  - first:
+      213: 4865577094323958371
+    second: DESCENDING COLON_3
+  - first:
+      213: -4859571370816218765
+    second: DESCENDING COLON_4
+  - first:
+      213: -6822953933795155262
+    second: DESCENDING COLON_5
+  - first:
+      213: -3507913769218421357
+    second: DESCENDING COLON_6
+  - first:
+      213: -7382552119357246691
+    second: DESCENDING COLON_7
+  - first:
+      213: 937851036912041898
+    second: DESCENDING COLON_8
+  - first:
+      213: -42337672835945851
+    second: DESCENDING COLON_9
+  - first:
+      213: -1325757210376718660
+    second: DESCENDING COLON_10
+  - first:
+      213: -5227172279438928175
+    second: DESCENDING COLON_11
+  - first:
+      213: 9054427300485105625
+    second: DESCENDING COLON_12
+  - first:
+      213: 4285951436322819405
+    second: DESCENDING COLON_13
+  - first:
+      213: -7619298547544334269
+    second: DESCENDING COLON_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DESCENDING COLON_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 441
+        width: 144
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a28021e09372d95c0800000000000000
+      internalID: -4207163350891493334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DESCENDING COLON_1
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 429
+        width: 143
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19d731ebe54b6f070800000000000000
+      internalID: 8139891695527624081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DESCENDING COLON_2
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 421
+        width: 173
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 556885f118378fd30800000000000000
+      internalID: 4465446028951717461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DESCENDING COLON_3
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 443
+        width: 183
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 362f47e9690068340800000000000000
+      internalID: 4865577094323958371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DESCENDING COLON_4
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 429
+        width: 143
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37957d9d5955f8cb0800000000000000
+      internalID: -4859571370816218765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DESCENDING COLON_5
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 440
+        width: 217
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c22949fb8fff41a0800000000000000
+      internalID: -6822953933795155262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DESCENDING COLON_6
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 441
+        width: 144
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39dc80b3303615fc0800000000000000
+      internalID: -3507913769218421357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DESCENDING COLON_7
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 437
+        width: 81
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1377ed36f7eb8990800000000000000
+      internalID: -7382552119357246691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DESCENDING COLON_8
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 440
+        width: 217
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aafbf539c8ae30d00800000000000000
+      internalID: 937851036912041898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DESCENDING COLON_9
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 453
+        width: 152
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58a2ff16c16996ff0800000000000000
+      internalID: -42337672835945851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DESCENDING COLON_10
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 25
+        width: 183
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb6351167d6f99de0800000000000000
+      internalID: -1325757210376718660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DESCENDING COLON_11
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 31
+        width: 160
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d61640b18a5577b0800000000000000
+      internalID: -5227172279438928175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DESCENDING COLON_12
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 35
+        width: 125
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d7830a48a9c7ad70800000000000000
+      internalID: 9054427300485105625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DESCENDING COLON_13
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 31
+        width: 160
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4dc8969f12ca7b30800000000000000
+      internalID: 4285951436322819405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DESCENDING COLON_14
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 22
+        width: 217
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34068fbf650d24690800000000000000
+      internalID: -7619298547544334269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DESCENDING COLON_0: -4207163350891493334
+      DESCENDING COLON_1: 8139891695527624081
+      DESCENDING COLON_10: -1325757210376718660
+      DESCENDING COLON_11: -5227172279438928175
+      DESCENDING COLON_12: 9054427300485105625
+      DESCENDING COLON_13: 4285951436322819405
+      DESCENDING COLON_14: -7619298547544334269
+      DESCENDING COLON_2: 4465446028951717461
+      DESCENDING COLON_3: 4865577094323958371
+      DESCENDING COLON_4: -4859571370816218765
+      DESCENDING COLON_5: -6822953933795155262
+      DESCENDING COLON_6: -3507913769218421357
+      DESCENDING COLON_7: -7382552119357246691
+      DESCENDING COLON_8: 937851036912041898
+      DESCENDING COLON_9: -42337672835945851
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
