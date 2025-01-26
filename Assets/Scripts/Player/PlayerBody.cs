@@ -18,12 +18,13 @@ public class PlayerBody : MonoBehaviour
     [SerializeField] float BigRadious = 2.4f;
     [SerializeField] float SmallRadious = 1f;
     [SerializeField] float BigFriction = 0.1f;
-    [SerializeField] float SmallFriction = 3f;
+    [SerializeField] float SmallFriction = 0.8f;
     [SerializeField] float GroundCheckDistance = 0.01f;
     [SerializeField] float PhysicsMaterialBounciness = 0f;
     [SerializeField] float BigRotationForce = 0.4f;
     [SerializeField] float SmallRotationForce = 0.85f;
     [SerializeField] float PizzaForceRotationBoost = 1.5f;
+    [SerializeField] float PizzaForceFriction = 4f;
     [SerializeField] float BigAirMovementForce = 0.3f;
     [SerializeField] float SmallAirMovementForce = 0.6f;
     [SerializeField] float BigGroundMovementForce = 0.6f;
@@ -33,21 +34,29 @@ public class PlayerBody : MonoBehaviour
     [SerializeField] float TotalMass = 1f;
 
     [SerializeField] float BigCoreLinearDamping = 1.0f;
-    [SerializeField] float SmallCoreLinearDamping = 0f;
     [SerializeField] float BigBallLinearDamping = 1.0f;
+
+    [SerializeField] float SmallCoreLinearDamping = 0f;
     [SerializeField] float SmallBallLinearDamping = 0f;
+
     [SerializeField] float BigCoreDampingRatio = 0.3f;
+    [SerializeField] float BigBallDampingRatio = 0.1f;    
     [SerializeField] float SmallCoreDampingRatio = 0.5f;
-    [SerializeField] float BigBallDampingRatio = 0.1f;
     [SerializeField] float SmallBallDampingRatio = 0.1f;
+
     [SerializeField] float BigCoreFrequency = 2.5f;
-    [SerializeField] float SmallCoreFrequency = 3.5f;    
     [SerializeField] float BigBallFrequency = 1.5f;
+    [SerializeField] float SmallCoreFrequency = 2.8f;
     [SerializeField] float SmallBallFrequency = 2.5f;
-    [SerializeField] float BigCoreGravity = 0.15f;
+    
+    [SerializeField] float BigCoreGravity = 0.15f;    
     [SerializeField] float SmallCoreGravity = 1f;
+
+
     [SerializeField] float BigBallGravity = 0.15f;
     [SerializeField] float SmallBallGravity = 1f;
+
+
     [SerializeField] float FartUpdraftForce = 1f;
 
     [SerializeField] bool ShowBones = false;
@@ -422,11 +431,12 @@ public class PlayerBody : MonoBehaviour
 
         var moveLeft = Input.GetKey(KeyCode.A);
         var moveRight = Input.GetKey(KeyCode.D);
-        if (!(moveLeft || moveRight)) HasPizzaForce = false;
 
         var position = _coreTransform.position;
         var isBig = Input.GetKey(KeyCode.Space);
+
         if (!isBig) HasFartUpdraft = false;
+        if (!(moveLeft || moveRight || isBig)) HasPizzaForce = false;
 
         var isGrounded = Physics2D.OverlapCircleAll(position, _sbp_c_distance.Value + GroundCheckDistance)
             .Any(i => i.name != "_");
@@ -441,7 +451,9 @@ public class PlayerBody : MonoBehaviour
         _sbp_b_distance.Value = isBig ? BigRadious : SmallRadious;
         _sbp_c_distance.Value = isBig ? BigRadious : SmallRadious;
         
-        _sbp_pmatFriction.Value = isBig ? BigFriction : SmallFriction;
+        _sbp_pmatFriction.Value = 
+            HasPizzaForce ? PizzaForceFriction :
+            isBig ? BigFriction : SmallFriction;
         
         _sbp_c_ldamp.Value = isBig ? BigCoreLinearDamping : SmallCoreLinearDamping;
         _sbp_b_ldamp.Value = isBig ? BigBallLinearDamping : SmallBallLinearDamping;

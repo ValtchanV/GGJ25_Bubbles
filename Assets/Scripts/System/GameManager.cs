@@ -16,6 +16,12 @@ public class GameManager : MonoBehaviour
         _playerBody = GetPlayerObject().transform.Find("Model").GetComponent<PlayerBody>();
     }
 
+    void LateUpdate()
+    {
+        _healthBar.HasFartUpdraft = _playerBody.HasFartUpdraft;
+        _healthBar.HasPizzaForce = _playerBody.HasPizzaForce;
+    }
+
     public static GameObject GetSystemObject()
         => SceneManager.GetActiveScene().GetRootGameObjects().First(i => i.name == "System");
 
