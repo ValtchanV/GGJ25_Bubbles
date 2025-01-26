@@ -103,4 +103,5 @@ MonoBehaviour:
   _catalogue:
   - {fileID: 4201811282210287589, guid: d597fec3bc7eb1048b96aed8ce65c589, type: 3}
   _delay: 2
-  _interval: 5
+  _interval: 3
+  _isSingleton: 1
