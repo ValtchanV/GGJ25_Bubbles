@@ -25,26 +25,6 @@ public class GameManager : MonoBehaviour
         _checkPointPosition = _playerBody.transform.position;
     }
 
-    void DoCheatCodeJump(int n)
-    {
-        var name = $"_CheatCodeJump_{n}";
-        var target = SceneManager.GetActiveScene().GetRootGameObjects().FirstOrDefault(i => i.name == name);
-        if (target != null) _playerBody.SetPosition(target.transform.position);
-    }
-
-    void FixedUpdate()
-    {   
-        if (Input.GetKeyDown(KeyCode.Alpha1)) DoCheatCodeJump(1);
-        if (Input.GetKeyDown(KeyCode.Alpha2)) DoCheatCodeJump(2);
-        if (Input.GetKeyDown(KeyCode.Alpha3)) DoCheatCodeJump(3);
-        if (Input.GetKeyDown(KeyCode.Alpha4)) DoCheatCodeJump(4);
-        if (Input.GetKeyDown(KeyCode.Alpha5)) DoCheatCodeJump(5);
-        if (Input.GetKeyDown(KeyCode.Alpha6)) DoCheatCodeJump(6);
-        if (Input.GetKeyDown(KeyCode.Alpha7)) DoCheatCodeJump(7);
-        if (Input.GetKeyDown(KeyCode.Alpha8)) DoCheatCodeJump(8);
-        if (Input.GetKeyDown(KeyCode.Alpha9)) DoCheatCodeJump(9);
-    }
-
     void LateUpdate()
     {
         if (PlayerHitPoints == 0)
