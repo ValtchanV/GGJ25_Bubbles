@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 758996537171719525}
   m_Layer: 0
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -381,6 +381,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d146935e4d4aec84ab31dc589a594f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sprites:
+  - {fileID: 3865516446293074792, guid: 5ffda3d1987d61b4099dcac5639d900a, type: 3}
+  - {fileID: -1192403916745169817, guid: 5ffda3d1987d61b4099dcac5639d900a, type: 3}
+  - {fileID: 6602213577804220629, guid: 5ffda3d1987d61b4099dcac5639d900a, type: 3}
+  - {fileID: 3686562803254598166, guid: 5ffda3d1987d61b4099dcac5639d900a, type: 3}
+  - {fileID: -3589851477056844415, guid: 5ffda3d1987d61b4099dcac5639d900a, type: 3}
+  - {fileID: 9109753088647189470, guid: 5ffda3d1987d61b4099dcac5639d900a, type: 3}
+  - {fileID: -2357282026522400577, guid: 5ffda3d1987d61b4099dcac5639d900a, type: 3}
+  - {fileID: -1249145403407239136, guid: 5ffda3d1987d61b4099dcac5639d900a, type: 3}
   ShapePointCount: 12
   ShapePointSize: 0.3
   BigRadious: 2.4
@@ -392,6 +401,7 @@ MonoBehaviour:
   BigRotationForce: 0.4
   SmallRotationForce: 0.85
   PizzaForceRotationBoost: 1.5
+  PizzaForceFriction: 4
   BigAirMovementForce: 0.3
   SmallAirMovementForce: 0.6
   BigGroundMovementForce: 0.6
@@ -404,12 +414,12 @@ MonoBehaviour:
   SmallBallLinearDamping: 0
   BigCoreDampingRatio: 0.3
   BigBallDampingRatio: 0.1
-  SmallCoreDampingRatio: 0.5
-  SmallBallDampingRatio: 0.1
+  SmallCoreDampingRatio: 0.8
+  SmallBallDampingRatio: 0.15
   BigCoreFrequency: 3.5
   BigBallFrequency: 3
-  SmallCoreFrequency: 2.5
-  SmallBallFrequency: 2.5
+  SmallCoreFrequency: 4
+  SmallBallFrequency: 2
   BigCoreGravity: 0.15
   SmallCoreGravity: 1
   BigBallGravity: 0.15

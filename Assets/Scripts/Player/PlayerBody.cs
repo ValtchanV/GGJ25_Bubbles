@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
+using UnityEditor;
+using UnityEditor.Profiling.Memory.Experimental;
 using UnityEngine;
 
 /*
@@ -13,6 +15,11 @@ TODO:
 
 public class PlayerBody : MonoBehaviour
 {
+    [SerializeField] Sprite[] Sprites = new Sprite[0];
+    private float _frameTime = 0f;
+    private int _frameIndex = 0;
+    [SerializeField] float AnimationSpeed = 20f;
+
     [SerializeField] int ShapePointCount = 12;
     [SerializeField] float ShapePointSize = 0.3f;
     [SerializeField] float BigRadious = 2.4f;
@@ -41,13 +48,13 @@ public class PlayerBody : MonoBehaviour
 
     [SerializeField] float BigCoreDampingRatio = 0.3f;
     [SerializeField] float BigBallDampingRatio = 0.1f;    
-    [SerializeField] float SmallCoreDampingRatio = 0.5f;
-    [SerializeField] float SmallBallDampingRatio = 0.1f;
+    [SerializeField] float SmallCoreDampingRatio = 0.8f;
+    [SerializeField] float SmallBallDampingRatio = 0.15f;
 
     [SerializeField] float BigCoreFrequency = 2.5f;
     [SerializeField] float BigBallFrequency = 1.5f;
-    [SerializeField] float SmallCoreFrequency = 2.8f;
-    [SerializeField] float SmallBallFrequency = 2.5f;
+    [SerializeField] float SmallCoreFrequency = 4f;
+    [SerializeField] float SmallBallFrequency = 2f;
     
     [SerializeField] float BigCoreGravity = 0.15f;    
     [SerializeField] float SmallCoreGravity = 1f;
@@ -65,18 +72,20 @@ public class PlayerBody : MonoBehaviour
     public bool HasFartUpdraft { get; set; }
     public bool HasPizzaForce { get; set; }
 
-    List<Rigidbody2D> _ballBodies = new ();
-    List<Transform> _ballTransforms = new ();
-    List<SpringJoint2D> _ballSprings = new ();
-    Rigidbody2D _coreBody;
-    Transform _coreTransform;
-    List<SpringJoint2D> _coreSprings = new ();
-    CircleCollider2D _coreCollider;
-    CircleCollider2D _playerTriggerCollider;
+    private List<Rigidbody2D> _ballBodies = new ();
+    private List<Transform> _ballTransforms = new ();
+    private List<SpringJoint2D> _ballSprings = new ();
+    private Rigidbody2D _coreBody;
+    private Transform _coreTransform;
+    private List<SpringJoint2D> _coreSprings = new ();
+    private CircleCollider2D _coreCollider;
+    private CircleCollider2D _playerTriggerCollider;
 
-    Mesh _mesh;
+    private Mesh _mesh;
+    private Material _meshMaterial;
     private Vector3[] _meshVertices;
     private Vector2[] _meshUV;
+    private Vector2[] _meshAnimatedUV;
     private int[] _meshTriangles;    
 
     // active soft body params
@@ -248,7 +257,7 @@ public class PlayerBody : MonoBehaviour
             ball.GetComponent<SpriteRenderer>().enabled = _sbp_showBones.IsTrue;
         }
         _coreTransform.Find("X").GetComponent<SpriteRenderer>().enabled = _sbp_showBones.IsTrue;
-
+        _coreTransform.GetComponent<MeshRenderer>().enabled = !_sbp_showBones.IsTrue;
     }
 
     void UpdateSoftBodyParams(bool force = false)
@@ -291,6 +300,7 @@ public class PlayerBody : MonoBehaviour
     void CreateCore()
     {
         _coreTransform = transform.Find("Sprite");
+        _meshMaterial = _coreTransform.GetComponent<MeshRenderer>().materials[0];
         _coreBody = _coreTransform.GetComponent<Rigidbody2D>();
         _coreCollider = _coreTransform.GetComponent<CircleCollider2D>();
         _playerTriggerCollider = _coreTransform.Find("X").GetComponent<CircleCollider2D>();
@@ -367,13 +377,16 @@ public class PlayerBody : MonoBehaviour
         }
 
         _meshUV = new Vector2[ShapePointCount + 1];
+        _meshAnimatedUV = new Vector2[ShapePointCount + 1];
         _meshUV[0] = new Vector2(0.5f, 0.5f);
+        _meshAnimatedUV[0] = _meshUV[0];
         for(var i = 0; i < ShapePointCount; i++)
         {
             var a = Math.PI * 2.0 / ShapePointCount * i;
             _meshUV[i + 1] = new Vector2(
                 (float)Math.Cos(a) / 2 + 0.5f, 
                 (float)Math.Sin(a) / 2 + 0.5f);
+            _meshAnimatedUV[i + 1] = _meshUV[i + 1];
         }
     }
 
@@ -397,22 +410,49 @@ public class PlayerBody : MonoBehaviour
     {
         var pointRadious = ShapePointSize / 2.0f;
         var position = _coreTransform.position;
-        var i = 1;
         var minRadious = 1000f;
 
+        var iMeshVertex = 1;
         foreach(var ball in _ballTransforms)
         {
             var v = ball.position - position;
             minRadious = Math.Min(minRadious, v.magnitude - 0.01f);
-            _meshVertices[i++] = v + (v.normalized * pointRadious);
+            _meshVertices[iMeshVertex++] = v + (v.normalized * pointRadious);
         }
 
-        minRadious = Math.Max(minRadious,ShapePointSize / 2f);
+        minRadious = Math.Max(minRadious, ShapePointSize / 2f);
+
+        _frameTime += Time.deltaTime;
+        var deltaFrame = (int)(_frameTime * AnimationSpeed);
+        if (deltaFrame > 0)
+        {
+            _frameIndex = (_frameIndex + deltaFrame) % Sprites.Length;
+            _frameTime -= deltaFrame / AnimationSpeed;
+
+            var selectedSprite = Sprites[_frameIndex];
+            if (!ReferenceEquals(_meshMaterial.mainTexture, selectedSprite.texture))
+            {
+                _meshMaterial.mainTexture = selectedSprite.texture;
+            }
+            
+            var tw = (float)selectedSprite.texture.width;
+            var th = (float)selectedSprite.texture.height;
+            var tr = selectedSprite.rect;
+            var uvX = tr.x / tw;
+            var uvY = tr.y / th;
+            var uvWidth = tr.width / tw;
+            var uvHeight = tr.height / th;
+
+            for(var i = 0; i < _meshUV.Length; i++)
+            {
+                _meshAnimatedUV[i] = new Vector2(_meshUV[i].x * uvWidth + uvX, _meshUV[i].y * uvHeight + uvY);
+            }
+        }
 
         _mesh.Clear();
         _mesh.vertices = _meshVertices;
         _mesh.triangles = _meshTriangles;
-        _mesh.uv = _meshUV;
+        _mesh.uv = _meshAnimatedUV;
         _mesh.RecalculateNormals();
 
         _coreCollider.radius = minRadious;
